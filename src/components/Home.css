@@ -17,10 +17,10 @@
   padding: 10px;
 }
 .herosecCona h1 {
-  font-size: 60px;
+  font-size: 50px;
 }
 .herosecCona h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 .herosecCona p {
   font-size: 16px;
@@ -142,7 +142,7 @@
 }
 @keyframes aba {
   0% {
-    transform: translateX(80px);
+    transform: translateX(5px);
   }
   100% {
     transform: translateX(0px);
@@ -479,86 +479,7 @@
 #rac {
   background-color: violet;
 }
-.footerContainer {
-  position: relative;
-  min-height: 50vh;
-  width: 100%;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.fxya {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
-  gap: 10px;
-}
-.footerBoxa {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.logobb {
-  height: 100px;
-  width: 165px;
-}
-.ficoBox {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.fooIco {
-  font-size: 25px;
-  cursor: pointer;
-}
-.footerBoxb {
-  position: relative;
-  padding: 10px;
-}
 
-.footerBoxc {
-  position: relative;
-  padding: 10px;
-}
-.formCon {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.formInput {
-  padding: 10px 10px;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  font-weight: 600;
-}
-label {
-  width: max-content;
-  font-weight: 600;
-}
-.sendBut {
-  padding: 10px 10px;
-  background-color: slateblue;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 1s;
-  font-weight: 600;
-}
-.sendBut:hover {
-  transform: translateY(-3px);
-}
-.polyfooter {
-  text-align: center;
-}
 @media (max-width: 1119px) {
   .whychooseContainer {
     grid-template-columns: repeat(auto-fit, minmax(139px, 1fr));

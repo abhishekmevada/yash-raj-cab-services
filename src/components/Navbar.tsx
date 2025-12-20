@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import logo from "/logo.jpeg";
 import { FaAlignRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [sta, setSta] = useState(true);
@@ -12,8 +13,16 @@ export default function Navbar() {
         <FaAlignRight />
       </p>
       <nav className={sta ? "cnav" : "onav"}>
-        <p className="navLink">Home</p>
-        <p className="navLink">About Us</p>
+        <p className="navLink">
+          <Link to="/" className="linka">
+            Home
+          </Link>
+        </p>
+        <p className="navLink">
+          <Link to="/aboutus" className="linka">
+            About Us
+          </Link>
+        </p>
         <p className="navLink">Fleet</p>
         <p className="navLink">Tour Packages</p>
         <p className="navLink">Pricing</p>
