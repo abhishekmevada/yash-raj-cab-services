@@ -114,4 +114,8 @@
   .ourmissContainer {
     grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
   }
+  .aboutusImg {
+    width: 100%;
+    height: auto;
+  }
 }
