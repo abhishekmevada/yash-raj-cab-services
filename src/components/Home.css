@@ -119,18 +119,18 @@
 .aboutImg {
   border-radius: 10px;
   object-fit: cover;
-  animation: ab linear;
+  /* animation: ab linear;
   animation-range: entry 0%, cover 30%;
-  animation-timeline: view();
+  animation-timeline: view(); */
 }
-@keyframes ab {
+/* @keyframes ab {
   0% {
     transform: translateX(-80px);
   }
   100% {
     transform: translateX(0px);
   }
-}
+} */
 .aboutConb {
   position: relative;
   display: flex;
