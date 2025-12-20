@@ -1,0 +1,77 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: white;
+}
+.logo {
+  height: 50px;
+}
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.navLink {
+  padding: 10px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 1s;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.navLink:hover {
+  background-color: red;
+  color: white;
+}
+.ctaBut {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+.navCio {
+  display: none;
+}
+@media (max-width: 777px) {
+  nav {
+    position: absolute;
+    top: 49px;
+    left: 0;
+    width: 100%;
+    background: black;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 10px 10px;
+  }
+  .navLink,
+  .ctaBut {
+    width: 100%;
+  }
+  .navCio {
+    display: block;
+    color: white;
+  }
+  .cnav {
+    display: none;
+  }
+  .onav {
+    display: flex;
+  }
+}

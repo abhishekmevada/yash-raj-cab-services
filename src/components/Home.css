@@ -1,0 +1,622 @@
+.homesecContainer {
+  position: relative;
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  gap: 5px;
+}
+.herosecCona {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.herosecCona h1 {
+  font-size: 60px;
+}
+.herosecCona h2 {
+  font-size: 40px;
+}
+.herosecCona p {
+  font-size: 16px;
+}
+.minheroseca {
+  position: relative;
+  width: 70%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ctaButher {
+  padding: 10px 10px;
+  width: 48%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: slateblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+.ctaButher:hover {
+  color: slateblue;
+  background-color: white;
+}
+.ctaButherb {
+  padding: 10px 10px;
+  width: 49%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+.ctaButherb:hover {
+  color: black;
+  background-color: white;
+}
+.herosecConb {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hersecBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.heroseca {
+  border-radius: 10px;
+  border-top-left-radius: 100px;
+}
+.herosecb {
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+}
+.herosecc {
+  border-radius: 10px;
+  border-bottom-left-radius: 100px;
+}
+.herosecd {
+  border-radius: 10px;
+  border-bottom-right-radius: 100px;
+}
+#hers {
+  height: 200px;
+  width: 200px;
+  transition: 1s;
+}
+#hers:hover {
+  transform: scale(1.1);
+}
+.aboutusContainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.aboutImg {
+  border-radius: 10px;
+  object-fit: cover;
+  animation: ab linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes ab {
+  0% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.aboutConb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: aba linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes aba {
+  0% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.whychooseContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.wcuBox {
+  padding: 10px 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid slateblue;
+}
+.aboutctaButher {
+  padding: 10px 10px;
+  width: max-content;
+  text-align: center;
+  background-color: slateblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+.aboutctaButher:hover {
+  color: slateblue;
+  background-color: white;
+}
+.servicesContainer {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.servicesConBox {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  gap: 10px;
+}
+.servicesBoxa {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: url("/serviceImga.png");
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes sa {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.servicesBoxa::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.servicesImg {
+  height: 250px;
+  width: 250px;
+  border-radius: 10p;
+}
+.servicesDes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.servicesDes h2 {
+  color: white;
+}
+.servicesDes p {
+  color: white;
+  text-align: center;
+}
+.servicesBoxb {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: url("/serviceImgb.png");
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+}
+.servicesBoxb::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.servicesBoxc {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: url("/serviceImgc.png");
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+}
+.servicesBoxc::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.servicesBoxd {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: url("/serviceImgd.png");
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+}
+.servicesBoxd::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.servicesBoxe {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: url("/serviceImge.png");
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+}
+
+.servicesBoxe::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.fleetContainer {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.fleetboxContainer {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+.fleetBox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  animation: fla linear, parallaxMove linear;
+  animation-range: entry 0% cover 30%;
+  animation-timeline: view();
+}
+@keyframes fla {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.fleetBox h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  color: white;
+  background-color: slateblue;
+}
+#fa {
+  background-image: url("/fleeta.jpg");
+  background-size: 100% 300px;
+  object-fit: contain;
+}
+#fb {
+  background-image: url("/fleetb.jpg");
+  background-size: 100% 300px;
+  object-fit: contain;
+}
+#fc {
+  background-image: url("/fleetc.jpg");
+  background-size: 100% 300px;
+  object-fit: contain;
+}
+#fd {
+  background-image: url("/fleetd.jpg");
+  background-size: 100% 300px;
+  object-fit: contain;
+}
+.testimonialContainer {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.testimonialminBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+}
+.testimonialBox {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  height: max-content;
+  animation: tes linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes tes {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.testimonialHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ranomColorBox {
+  height: 20px;
+  width: 20px;
+  background-color: slateblue;
+  border-radius: 50%;
+}
+.testimonialminBox p {
+  padding: 10px 10px;
+}
+#rab {
+  background-color: brown;
+}
+#rac {
+  background-color: violet;
+}
+.footerContainer {
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fxya {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+  gap: 10px;
+}
+.footerBoxa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.logobb {
+  height: 100px;
+  width: 165px;
+}
+.ficoBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fooIco {
+  font-size: 25px;
+  cursor: pointer;
+}
+.footerBoxb {
+  position: relative;
+  padding: 10px;
+}
+
+.footerBoxc {
+  position: relative;
+  padding: 10px;
+}
+.formCon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formInput {
+  padding: 10px 10px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+label {
+  width: max-content;
+  font-weight: 600;
+}
+.sendBut {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 1s;
+  font-weight: 600;
+}
+.sendBut:hover {
+  transform: translateY(-3px);
+}
+.polyfooter {
+  text-align: center;
+}
+@media (max-width: 1119px) {
+  .whychooseContainer {
+    grid-template-columns: repeat(auto-fit, minmax(139px, 1fr));
+  }
+}
+@media (max-width: 1031px) {
+  .herosecCona {
+    width: auto;
+  }
+  #hers {
+    height: 200px;
+    width: 200px;
+  }
+  .minheroseca {
+    width: 100%;
+  }
+}
+@media (max-width: 904px) {
+  .aboutImg {
+    height: auto;
+    width: 300px;
+  }
+}
+@media (max-width: 881px) {
+  .homesecContainer {
+    flex-direction: column;
+  }
+  .herosecConb {
+    width: auto;
+  }
+}
+@media (max-width: 850px) {
+  .servicesConBox,
+  .fleetboxContainer {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 2fr));
+  }
+}
+@media (max-width: 665px) {
+  .aboutusContainer {
+    flex-direction: column;
+  }
+  .whychooseContainer {
+    grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+  }
+  #hers {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (max-width: 590px) {
+  .aboutImg {
+    height: auto;
+    width: 100%;
+  }
+  .herosecConb {
+    display: none;
+  }
+  .homesecContainer {
+    min-height: max-content;
+  }
+}
