@@ -47,6 +47,19 @@
   gap: 10px;
   border-radius: 10px;
   background-color: bisque;
+  animation: sa linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes sa {
+  0% {
+    opacity: 0;
+    scale: 0.1;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 .ourmissconb {
   background-color: aqua;
@@ -64,6 +77,17 @@
   justify-content: center;
   gap: 20px;
   color: white;
+  animation: sab linear;
+  animation-range: entry 0%, cover 30%;
+  animation-timeline: view();
+}
+@keyframes sab {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .palink {
   color: white;
