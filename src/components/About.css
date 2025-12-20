@@ -35,7 +35,8 @@
 .ourmissContainer {
   position: relative;
   padding: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
 .ourmisscon,
@@ -93,4 +94,24 @@
   color: white;
   font-weight: 600;
   text-decoration: underline;
+}
+.aboutsecab p {
+  text-align: center;
+}
+@media (max-width: 1003px) {
+  .aboutuscona,
+  .aboutusconb {
+    width: auto;
+  }
+  .aboutusImg {
+    height: 35vh;
+  }
+}
+@media (max-width: 830px) {
+  .AboutusContainer {
+    flex-direction: column;
+  }
+  .ourmissContainer {
+    grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+  }
 }
