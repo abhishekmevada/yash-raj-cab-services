@@ -40,8 +40,16 @@ export default function Footer() {
                 About Us
               </Link>
             </p>
-            <p className="navLink">Fleet</p>
-            <p className="navLink">Tour Packages</p>
+            <p className="navLink">
+              <Link to="/fleet" className="abxx">
+                Fleets
+              </Link>
+            </p>
+            <p className="navLink">
+              <Link to="/tour" className="abxx">
+                Tour Places
+              </Link>
+            </p>
             <p className="navLink">Pricing</p>
             <p className="navLink">Contact Us</p>
             <p className="navLink">Book Now</p>

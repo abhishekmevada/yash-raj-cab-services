@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/Aboutus";
 import Fleet from "./components/Fleet";
+import Tour from "./components/Tour";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/aboutus" element={<About />}></Route>
           <Route path="/fleets" element={<Fleet />}></Route>
+          <Route path="/tour" element={<Tour />}></Route>
         </Routes>
       </BrowserRouter>
     </>

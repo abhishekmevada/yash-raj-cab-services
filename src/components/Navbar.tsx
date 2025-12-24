@@ -28,8 +28,11 @@ export default function Navbar() {
             Fleets
           </Link>
         </p>
-        <p className="navLink">Tour Packages</p>
-        <p className="navLink">Pricing</p>
+        <p className="navLink">
+          <Link to="/tour" className="linka">
+            Tour Places
+          </Link>
+        </p>
         <p className="navLink">Contact Us</p>
         <p className="ctaBut">Book Now</p>
       </nav>
