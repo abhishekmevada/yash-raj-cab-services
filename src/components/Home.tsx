@@ -3,6 +3,7 @@ import "./Home.css";
 import aboutcab from "/aboutcab.jpg";
 import Footer from "./Footer";
 import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
   });
 
   // 2. Handle Input Changes
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -26,10 +27,9 @@ export default function Home() {
   };
 
   // 3. Handle Form Submission (Send to WhatsApp)
-  const handleBookCab = (e) => {
+  const handleBookCab = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // REPLACE THIS WITH YOUR BUSINESS WHATSAPP NUMBER
     const phoneNumber = "+919510954023";
 
     const message =
@@ -37,12 +37,11 @@ export default function Home() {
       `Trip Type: ${formData.tripType}\n` +
       `Pick Up: ${formData.pickupLocation}\n` +
       `Drop: ${formData.dropLocation}\n` +
-      `Date & Time:${formData.dateTime}`;
+      `Date & Time: ${formData.dateTime}`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
-
     window.open(url, "_blank");
   };
 
