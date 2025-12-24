@@ -1,13 +1,51 @@
 import Navbar from "./Navbar";
 import "./Home.css";
-import heroseca from "/heroseca.jpg";
-import herosecb from "/herosecb.jpg";
-import herosecc from "/herosecc.jpg";
-import herosecd from "/herosecd.jpg";
 import aboutcab from "/aboutcab.jpg";
 import Footer from "./Footer";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
+  // --- FIX: Moved State & Logic to the top level of Home ---
+
+  // 1. Initialize State for all fields
+  const [formData, setFormData] = useState({
+    tripType: "Out Station", // Default selection
+    pickupLocation: "",
+    dropLocation: "",
+    dateTime: "",
+  });
+
+  // 2. Handle Input Changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // 3. Handle Form Submission (Send to WhatsApp)
+  const handleBookCab = (e) => {
+    e.preventDefault();
+
+    // REPLACE THIS WITH YOUR BUSINESS WHATSAPP NUMBER
+    const phoneNumber = "+919510954023";
+
+    const message =
+      `New Cab Booking Request\n\n` +
+      `Trip Type: ${formData.tripType}\n` +
+      `Pick Up: ${formData.pickupLocation}\n` +
+      `Drop: ${formData.dropLocation}\n` +
+      `Date & Time:${formData.dateTime}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <Navbar />
@@ -15,31 +53,124 @@ export default function Home() {
         <div className="herosecCona">
           <h1>Yash Raj Cab Services</h1>
           <h2>Reliable Taxi & Tourist Cab Services</h2>
-          <h3>Safe • Comfortable • On-Time Travel</h3>
-          <p>
-            Travel with confidence using Yash Raj Cab Services. We offer clean,
-            well-maintained vehicles driven by professional and verified drivers
-            to ensure a smooth and stress-free journey every time.
-            <br />
-            <br />
-            We provide local taxi services, outstation trips, airport pickup &
-            drop, and customized tour packages at affordable and transparent
-            prices.
+          <h3>
+            Safe • <span className="spa">Comfortable</span> • On-Time Travel
+          </h3>
+          <p className="herodec">
+            <mark>
+              Travel with confidence using Yash Raj Cab Services. We offer
+              clean, well maintained vehicles driven by professional and
+              verified drivers to ensure a smooth and stress-free journey every
+              time.
+            </mark>
           </p>
           <div className="minheroseca">
-            <p className="ctaButher">Book Now</p>
+            <p className="ctaButher">
+              <Link to="/fleets" className="linkher">
+                Visit Our Fleets
+              </Link>
+            </p>
             <p className="ctaButherb">Call 24/7</p>
           </div>
         </div>
+
         <div className="herosecConb">
-          <div className="hersecBox">
-            <img src={heroseca} alt="" className="heroseca" id="hers" />
-            <img src={herosecb} alt="" className="herosecb" id="hers" />
-            <img src={herosecc} alt="" className="herosecc" id="hers" />
-            <img src={herosecd} alt="" className="herosecd" id="hers" />
-          </div>
+          {/* Form starts here */}
+          <form onSubmit={handleBookCab} className="formContainerxyz">
+            <div className="checkBox">
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="Out Station"
+                  checked={formData.tripType === "Out Station"}
+                  onChange={handleChange}
+                />
+                Out Station
+              </label>
+
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="One Way"
+                  checked={formData.tripType === "One Way"}
+                  onChange={handleChange}
+                />
+                One Way
+              </label>
+
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="Local"
+                  checked={formData.tripType === "Local"}
+                  onChange={handleChange}
+                />
+                Local
+              </label>
+
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="tripType"
+                  value="Airport"
+                  checked={formData.tripType === "Airport"}
+                  onChange={handleChange}
+                />
+                Airport
+              </label>
+
+              <p className="radioResult">
+                You chose: <strong>{formData.tripType}</strong>
+              </p>
+            </div>
+
+            <div className="fieldBox">
+              <label>Pick Up Location</label>
+              <input
+                type="text"
+                name="pickupLocation"
+                value={formData.pickupLocation}
+                onChange={handleChange}
+                placeholder="Enter pickup point"
+                className="formInput"
+                required
+              />
+            </div>
+
+            <div className="fieldBox">
+              <label>Drop Location</label>
+              <input
+                type="text"
+                name="dropLocation"
+                value={formData.dropLocation}
+                onChange={handleChange}
+                placeholder="Enter drop point"
+                className="formInput"
+                required
+              />
+            </div>
+
+            <div className="fieldBox">
+              <label>Date & Time</label>
+              <input
+                type="datetime-local"
+                name="dateTime"
+                value={formData.dateTime}
+                onChange={handleChange}
+                className="formInput"
+                required
+              />
+            </div>
+            <button type="submit" className="formBut">
+              Book Cab
+            </button>
+          </form>
         </div>
       </div>
+
       <div className="aboutusContainer">
         <img src={aboutcab} alt="Yash Raj Cab Services" className="aboutImg" />
         <div className="aboutConb">
@@ -63,9 +194,14 @@ export default function Home() {
             <p className="wcuBox">Safe & Comfortable Journeys</p>
             <p className="wcuBox">On-Time Pickup & Drop</p>
           </div>
-          <p className="aboutctaButher">View About Us More...</p>
+          <p className="aboutctaButher">
+            <Link to="/aboutus" className="linkherc">
+              View About Us More...
+            </Link>
+          </p>
         </div>
       </div>
+
       <div className="servicesContainer">
         <h1>Our Services</h1>
         <div className="servicesConBox">
@@ -118,6 +254,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="fleetContainer">
         <h1>Our Fleet</h1>
         <p>We offer a wide range of vehicles to suit your needs</p>
@@ -135,8 +272,13 @@ export default function Home() {
             <h2>Luxury Cars</h2>
           </div>
         </div>
-        <p className="aboutctaButher">View Cars</p>
+        <p className="aboutctaButher">
+          <Link to="/fleets" className="linkherc">
+            View Cars
+          </Link>
+        </p>
       </div>
+
       <div className="testimonialContainer">
         <h1>Customer Testimonials</h1>
         <div className="testimonialminBox">

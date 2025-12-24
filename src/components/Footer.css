@@ -11,8 +11,8 @@
 }
 .fxya {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .footerBoxa {
@@ -38,11 +38,16 @@
 .footerBoxb {
   position: relative;
   padding: 10px;
+  width: max-content;
 }
 
 .footerBoxc {
   position: relative;
   padding: 10px;
+  width: max-content;
+}
+.cityLink {
+  white-space: nowrap;
 }
 .formCon {
   position: relative;

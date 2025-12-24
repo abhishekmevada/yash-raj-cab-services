@@ -23,7 +23,11 @@ export default function Navbar() {
             About Us
           </Link>
         </p>
-        <p className="navLink">Fleet</p>
+        <p className="navLink">
+          <Link to="/fleets" className="linka">
+            Fleets
+          </Link>
+        </p>
         <p className="navLink">Tour Packages</p>
         <p className="navLink">Pricing</p>
         <p className="navLink">Contact Us</p>

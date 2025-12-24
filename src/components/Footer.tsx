@@ -46,6 +46,21 @@ export default function Footer() {
             <p className="navLink">Contact Us</p>
             <p className="navLink">Book Now</p>
           </div>
+          <div className="footerBoxc">
+            <h3>Popular Cities</h3>
+            <p className="cityLink">Cabs in Vadodara</p>
+            <p className="cityLink">Cabs in Surat</p>
+            <p className="cityLink">Cabs in Palanpur</p>
+            <p className="cityLink">Cabs in Jodhpur</p>
+            <p className="cityLink">Cabs in Morbi</p>
+            <p className="cityLink">Cabs in Diu</p>
+            <p className="cityLink">Cabs in Rajkot</p>
+            <p className="cityLink">Cabs in Udaipur</p>
+            <p className="cityLink">Cabs in Jaipur</p>
+            <p className="cityLink">Cabs in Gandhinagar</p>
+            <p className="cityLink">Cabs in Somnath</p>
+            <p className="cityLink">Cabs in Vapi</p>
+          </div>
         </div>
         <p className="polyfooter">
           © 2025 Taxi & Tourist Cab Service | All Rights Reserved

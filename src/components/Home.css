@@ -5,6 +5,9 @@
   margin-top: 50px;
   display: flex;
   gap: 5px;
+  background-image: url("/public/herobg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .herosecCona {
   position: relative;
@@ -15,6 +18,7 @@
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  color: white;
 }
 .herosecCona h1 {
   font-size: 50px;
@@ -25,6 +29,10 @@
 .herosecCona p {
   font-size: 16px;
 }
+.herodec mark {
+  background-color: yellow;
+  color: black;
+}
 .minheroseca {
   position: relative;
   width: 70%;
@@ -33,6 +41,7 @@
   flex-wrap: wrap;
 }
 .ctaButher {
+  position: relative;
   padding: 10px 10px;
   width: 48%;
   height: 50px;
@@ -48,10 +57,25 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 1s;
 }
+.linkher {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
 .ctaButher:hover {
   color: slateblue;
   background-color: white;
 }
+.ctaButher:hover .linkher {
+  color: slateblue;
+}
+
 .ctaButherb {
   padding: 10px 10px;
   width: 49%;
@@ -80,35 +104,55 @@
   align-items: center;
   justify-content: center;
 }
-.hersecBox {
+.formContainerxyz {
   position: relative;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-}
-.heroseca {
+  padding: 10px;
   border-radius: 10px;
-  border-top-left-radius: 100px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
-.herosecb {
-  border-radius: 10px;
-  border-top-right-radius: 100px;
+.checkBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.herosecc {
-  border-radius: 10px;
-  border-bottom-left-radius: 100px;
+.radBut {
+  display: flex;
+  gap: 2px;
 }
-.herosecd {
-  border-radius: 10px;
-  border-bottom-right-radius: 100px;
+.radioResult {
+  display: none;
 }
-#hers {
-  height: 200px;
-  width: 200px;
-  transition: 1s;
+.fieldBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-#hers:hover {
-  transform: scale(1.1);
+.formInput {
+  border: 1px solid #666;
+  background: transparent;
+  color: white;
+}
+.formBut {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background-color: slateblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
 }
 .aboutusContainer {
   position: relative;
@@ -174,6 +218,15 @@
 .aboutctaButher:hover {
   color: slateblue;
   background-color: white;
+}
+.linkherc {
+  text-decoration: none;
+  padding: 10px 10px;
+  width: max-content;
+  color: white;
+}
+.aboutctaButher:hover .linkherc {
+  color: slateblue;
 }
 .servicesContainer {
   position: relative;
@@ -510,6 +563,13 @@
   .herosecConb {
     width: auto;
   }
+  .homesecContainer {
+    background-size: 100% 100%;
+    background-image: url("/public/Yellowtaxi.jpg");
+  }
+  .formContainerxyz {
+    width: 100%;
+  }
 }
 @media (max-width: 850px) {
   .servicesConBox,
@@ -533,9 +593,6 @@
   .aboutImg {
     height: auto;
     width: 100%;
-  }
-  .herosecConb {
-    display: none;
   }
   .homesecContainer {
     min-height: max-content;
