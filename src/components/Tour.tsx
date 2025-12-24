@@ -9,6 +9,7 @@ import navasari from "/navasari.jpg";
 import Rajkot from "/Rajkot.jpg";
 import surat from "/surat.jpg";
 import vadodra from "/vadodra.jpg";
+import Footer from "./Footer";
 
 type tourPro = {
   id: number;
@@ -78,6 +79,7 @@ export default function Tour() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
