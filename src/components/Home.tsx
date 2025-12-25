@@ -2,9 +2,10 @@ import Navbar from "./Navbar";
 import "./Home.css";
 import aboutcab from "/aboutcab.jpg";
 import Footer from "./Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 export default function Home() {
   // --- FIX: Moved State & Logic to the top level of Home ---
@@ -45,6 +46,37 @@ export default function Home() {
     window.open(url, "_blank");
   };
 
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Define the function to run when the page loads
+    const handleLoad = () => {
+      // Optional: Add a small delay so the user sees the loader for at least a moment
+      // (prevents an ugly "flicker" on fast connections)
+      setTimeout(() => {
+        setIsPageLoaded(true);
+      }, 500);
+    };
+
+    // Check if the page has ALREADY loaded before this component mounted
+    // (This handles cases where the browser caches the page)
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      // Otherwise, add the event listener
+      window.addEventListener("load", handleLoad);
+    }
+
+    // Cleanup: Remove the listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  // 1. Show Loader if page is NOT loaded
+  if (!isPageLoaded) {
+    return <Loading />;
+  }
   return (
     <>
       <Navbar />
@@ -52,9 +84,7 @@ export default function Home() {
         <div className="herosecCona">
           <h1>Yash Raj Cab Services</h1>
           <h2>Reliable Taxi & Tourist Cab Services</h2>
-          <h3>
-            Safe • <span className="spa">Comfortable</span> • On-Time Travel
-          </h3>
+          <h3>Safe • Comfortable • On-Time Travel</h3>
           <p className="herodec">
             <mark>
               Travel with confidence using Yash Raj Cab Services. We offer
@@ -69,7 +99,9 @@ export default function Home() {
                 Visit Our Fleets
               </Link>
             </p>
-            <p className="ctaButherb">Call 24/7</p>
+            <a href="tell:+917777914231" className="ctaButherb">
+              Call 24/7
+            </a>
           </div>
         </div>
 

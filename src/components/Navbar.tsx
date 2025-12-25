@@ -33,8 +33,16 @@ export default function Navbar() {
             Tour Places
           </Link>
         </p>
-        <p className="navLink">Contact Us</p>
-        <p className="ctaBut">Book Now</p>
+        <p className="navLink">
+          <Link to="/contactus" className="linka">
+            Contact Us
+          </Link>
+        </p>
+        <p className="ctaBut">
+          <Link to="/" className="linka">
+            Book Now
+          </Link>
+        </p>
       </nav>
     </div>
   );

@@ -1,0 +1,37 @@
+.loadingContainer {
+  position: relative;
+  position: relative;
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.loadingBox {
+  position: relative;
+  width: 230px;
+  height: 4px;
+  background-color: #d8d8d8;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.loader {
+  height: 4px;
+  width: 30%;
+  background-color: slateblue;
+  transition: 1s;
+  animation: aniload 1s linear infinite;
+}
+@keyframes aniload {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(230px);
+  }
+}

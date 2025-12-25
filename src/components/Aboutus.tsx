@@ -2,8 +2,41 @@ import Footer from "./Footer";
 import Aboutusbg from "/aboutusbg.jpg";
 import Navbar from "./Navbar";
 import "./About.css";
+import { useState, useEffect } from "react";
+import Loading from "./Loading";
 
 export default function Aboutus() {
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Define the function to run when the page loads
+    const handleLoad = () => {
+      // Optional: Add a small delay so the user sees the loader for at least a moment
+      // (prevents an ugly "flicker" on fast connections)
+      setTimeout(() => {
+        setIsPageLoaded(true);
+      }, 500);
+    };
+
+    // Check if the page has ALREADY loaded before this component mounted
+    // (This handles cases where the browser caches the page)
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      // Otherwise, add the event listener
+      window.addEventListener("load", handleLoad);
+    }
+
+    // Cleanup: Remove the listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  // 1. Show Loader if page is NOT loaded
+  if (!isPageLoaded) {
+    return <Loading />;
+  }
   return (
     <>
       <Navbar />
@@ -65,11 +98,11 @@ export default function Aboutus() {
           professional service, friendly drivers, and stress-free travel.
         </p>
         <p>
-          <a href="" className="palink">
+          <a href="tell:+917777914231" className="palink">
             Call
           </a>{" "}
           or{" "}
-          <a href="" className="palink">
+          <a href="https://wa.me/+91777791423" className="palink">
             WhatsApp
           </a>{" "}
           us today to book your cab.

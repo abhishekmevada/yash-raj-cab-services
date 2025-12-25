@@ -29,6 +29,7 @@
   transition: 1s;
   animation: auto linear 0s 1 normal none running pro;
   animation-range: entry cover 30%;
+  margin-top: 10px;
 }
 .tourImg {
   width: 100%;

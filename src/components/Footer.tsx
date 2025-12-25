@@ -13,8 +13,25 @@ export default function Footer() {
             <img src={logo} alt="Yash Raj Car services" className="logobb" />
             <h1>Book Your Ride Today!</h1>
             <h2>Designed for comfort, safety & reliability</h2>
-            <p>Call / WhatsApp: +91 XXXXXXXXXX</p>
-            <p>Service Area: City & Nearby Locations</p>
+            <p>
+              Email:{" "}
+              <a href="mailto: Bhojakvanraj111@gmail.com" className="fLink">
+                Bhojakvanraj111@gmail.com
+              </a>
+            </p>
+            <p>
+              Call / WhatsApp:{" "}
+              <a href="https://wa.me/+917777914231" className="fLink">
+                +91 7777914231
+              </a>
+            </p>
+            <p>
+              Address:{" "}
+              <a href="" className="fLink">
+                Service Area: Kothariya Chowkdi, Khokhdadi River, Rajkot
+              </a>
+            </p>
+
             <p>Available: 24/7</p>
             <div className="ficoBox">
               <p className="fooIco">
@@ -41,7 +58,7 @@ export default function Footer() {
               </Link>
             </p>
             <p className="navLink">
-              <Link to="/fleet" className="abxx">
+              <Link to="/fleets" className="abxx">
                 Fleets
               </Link>
             </p>
@@ -50,9 +67,16 @@ export default function Footer() {
                 Tour Places
               </Link>
             </p>
-            <p className="navLink">Pricing</p>
-            <p className="navLink">Contact Us</p>
-            <p className="navLink">Book Now</p>
+            <p className="navLink">
+              <Link to="/contactus" className="abxx">
+                Contact Us
+              </Link>
+            </p>
+            <p className="navLink">
+              <Link to="/" className="abxx">
+                Book Now
+              </Link>
+            </p>
           </div>
           <div className="footerBoxc">
             <h3>Popular Cities</h3>

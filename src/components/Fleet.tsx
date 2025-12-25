@@ -10,6 +10,9 @@ import ToyotaInnovaa from "/innovacre.jpg";
 import ToyotaInnovab from "/toyotainnovab.jpg";
 import volvo from "/volvob.png";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Loading from "./Loading";
 
 type Carproduct = {
   id: number;
@@ -95,6 +98,38 @@ export default function Fleet() {
       des: "Toll parking driver food extra charge",
     },
   ];
+
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Define the function to run when the page loads
+    const handleLoad = () => {
+      // Optional: Add a small delay so the user sees the loader for at least a moment
+      // (prevents an ugly "flicker" on fast connections)
+      setTimeout(() => {
+        setIsPageLoaded(true);
+      }, 500);
+    };
+
+    // Check if the page has ALREADY loaded before this component mounted
+    // (This handles cases where the browser caches the page)
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      // Otherwise, add the event listener
+      window.addEventListener("load", handleLoad);
+    }
+
+    // Cleanup: Remove the listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  // 1. Show Loader if page is NOT loaded
+  if (!isPageLoaded) {
+    return <Loading />;
+  }
   return (
     <>
       <Navbar />
@@ -109,8 +144,10 @@ export default function Fleet() {
                 <p>{items.price}</p>
                 <p>{items.distance}</p>
                 <p>{items.des}</p>
-                <a href="" className="bookBut">
-                  Book Now
+                <a className="bookBut">
+                  <Link to="/" className="linkf">
+                    Book Now
+                  </Link>
                 </a>
               </div>
             </div>

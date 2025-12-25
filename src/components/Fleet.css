@@ -30,6 +30,7 @@
   flex-direction: column;
 }
 .bookBut {
+  position: relative;
   padding: 5px;
   background-color: slateblue;
   color: white;
@@ -40,4 +41,15 @@
   white-space: nowrap;
   text-decoration: none;
   text-align: center;
+}
+.linkf {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  border: none;
 }

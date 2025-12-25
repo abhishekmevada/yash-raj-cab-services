@@ -91,6 +91,7 @@
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 1s;
+  text-decoration: none;
 }
 .ctaButherb:hover {
   color: black;
@@ -456,22 +457,22 @@
   background-color: slateblue;
 }
 #fa {
-  background-image: url("/fleeta.jpg");
+  background-image: url("/fleeta.png");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fb {
-  background-image: url("/fleetb.jpg");
+  background-image: url("/fleetb.png");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fc {
-  background-image: url("/fleetc.jpg");
+  background-image: url("/fleetc.png");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fd {
-  background-image: url("/fleetd.jpg");
+  background-image: url("/fleetd.png");
   background-size: 100% 300px;
   object-fit: contain;
 }

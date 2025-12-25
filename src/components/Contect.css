@@ -1,0 +1,97 @@
+.contactuscontainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  padding-top: 60px;
+  display: flex;
+  gap: 10px;
+}
+.contactuscona {
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.contactusconb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.formContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+}
+.inputField {
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  font-weight: 600;
+
+  font-size: 16px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.textDescribe {
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+
+  resize: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.SendBut {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: 0.5s;
+  width: 100%;
+  border: 2px solid slateblue;
+  font-size: 16px;
+  font-weight: 600;
+}
+.SendBut:hover {
+  background-color: white;
+  color: slateblue;
+}
+.plink {
+  color: slateblue;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media (max-width: 772px) {
+  .contactuscontainer {
+    flex-direction: column;
+  }
+  .contactuscona,
+  .contactusconb {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .formContainer {
+    width: 100%;
+  }
+}
