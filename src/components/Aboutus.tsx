@@ -102,7 +102,7 @@ export default function Aboutus() {
             Call
           </a>{" "}
           or{" "}
-          <a href="https://wa.me/+91777791423" className="palink">
+          <a href="https://wa.me/+917777914231" className="palink">
             WhatsApp
           </a>{" "}
           us today to book your cab.
