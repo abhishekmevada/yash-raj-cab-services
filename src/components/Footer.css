@@ -82,6 +82,8 @@ label {
 }
 .polyfooter {
   text-align: center;
+  text-decoration: underline;
+  color: white;
 }
 .abxx {
   text-decoration: none;

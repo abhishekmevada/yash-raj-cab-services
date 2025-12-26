@@ -13,6 +13,7 @@ export default function Home() {
   // 1. Initialize State for all fields
   const [formData, setFormData] = useState({
     tripType: "Out Station", // Default selection
+    carType: "Standard",
     pickupLocation: "",
     dropLocation: "",
     dateTime: "",
@@ -36,6 +37,7 @@ export default function Home() {
     const message =
       `New Cab Booking Request\n\n` +
       `Trip Type: ${formData.tripType}\n` +
+      `Car Type: ${formData.carType}\n` +
       `Pick Up: ${formData.pickupLocation}\n` +
       `Drop: ${formData.dropLocation}\n` +
       `Date & Time: ${formData.dateTime}`;
@@ -108,6 +110,7 @@ export default function Home() {
         <div className="herosecConb">
           {/* Form starts here */}
           <form onSubmit={handleBookCab} className="formContainerxyz">
+            <p>Type: </p>
             <div className="checkBox">
               <label className="radBut">
                 <input
@@ -157,7 +160,56 @@ export default function Home() {
                 You chose: <strong>{formData.tripType}</strong>
               </p>
             </div>
+            <p>Car Selection: </p>
+            <div className="checkBox">
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="carType"
+                  value="Standard"
+                  checked={formData.carType === "Standard"}
+                  onChange={handleChange}
+                />
+                Standard
+              </label>
 
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="carType"
+                  value="Business"
+                  checked={formData.carType === "Business"}
+                  onChange={handleChange}
+                />
+                Business
+              </label>
+
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="carType"
+                  value="Vip"
+                  checked={formData.carType === "Vip"}
+                  onChange={handleChange}
+                />
+                Vip
+              </label>
+
+              <label className="radBut">
+                <input
+                  type="radio"
+                  name="carType"
+                  value="Bus-Minivan"
+                  checked={formData.carType === "Bus-Minivan"}
+                  onChange={handleChange}
+                />
+                Bus-Minivan
+              </label>
+
+              <p className="radioResult">
+                You chose: <strong>{formData.carType}</strong>
+              </p>
+            </div>
             <div className="fieldBox">
               <label>Pick Up Location</label>
               <input
@@ -291,7 +343,10 @@ export default function Home() {
         <p>We offer a wide range of vehicles to suit your needs</p>
         <div className="fleetboxContainer">
           <div className="fleetBox" id="fa">
-            <h2>Hatchback & Sedan</h2>
+            <h2>Hatchback</h2>
+          </div>
+          <div className="fleetBox" id="fe">
+            <h2>Sedan</h2>
           </div>
           <div className="fleetBox" id="fb">
             <h2>SUV & MUV</h2>
@@ -302,10 +357,41 @@ export default function Home() {
           <div className="fleetBox" id="fd">
             <h2>Luxury Cars</h2>
           </div>
+          <div className="fleetBox" id="ff">
+            <h2>Volvo Bus</h2>
+          </div>
         </div>
         <p className="aboutctaButher">
           <Link to="/fleets" className="linkherc">
             View Cars
+          </Link>
+        </p>
+      </div>
+
+      <div className="servicesContainer">
+        <h1>Our Tourist Places</h1>
+        <div className="servicesConBox">
+          <div className="servicesBoxf">
+            <div className="servicesDes">
+              <h2>Navasari</h2>
+            </div>
+          </div>
+
+          <div className="servicesBoxg">
+            <div className="servicesDes">
+              <h2>Gandhinagar</h2>
+            </div>
+          </div>
+
+          <div className="servicesBoxh">
+            <div className="servicesDes">
+              <h2>Surat</h2>
+            </div>
+          </div>
+        </div>
+        <p className="aboutctaButher">
+          <Link to="/tour" className="linkherc">
+            View More...
           </Link>
         </p>
       </div>

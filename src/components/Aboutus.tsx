@@ -45,18 +45,24 @@ export default function Aboutus() {
           <h1>About Us</h1>
           <h2>Your Trusted Partner for Safe & Comfortable Travel</h2>
           <p>
-            Yash Raj Cab Services is a reliable Taxi & Tourist Cab Service
-            dedicated to providing safe, comfortable, and on-time travel
-            solutions for individuals, families, and corporate clients. With
-            years of experience in the travel and transportation industry, we
-            focus on making every journey smooth, affordable, and stress-free.
+            <mark>Yash Raj Cab Services</mark> is a{" "}
+            <mark>reliable Taxi & Tourist Cab Service</mark> dedicated to
+            providing <mark>safe, comfortable, and on-time travel</mark>{" "}
+            solutions for{" "}
+            <mark>individuals, families, and corporate clients.</mark> Withyears
+            of experience in the <mark>travel and transportation industry</mark>
+            , we focus on making every journey{" "}
+            <mark>smooth, affordable, and stress-free.</mark>
             <br />
             <br />
-            Our wide range of services includes local city rides, airport pickup
-            & drop, outstation travel, tourist cab packages, and corporate
-            transportation. Whether you need a short city trip or a
-            long-distance journey, Yash Raj Cab Services ensures a comfortable
-            and hassle-free travel experience every time.
+            Our wide range of services includes{" "}
+            <mark>
+              local city rides, airport pickup & drop, outstation travel,
+              tourist cab packages, and corporate transportation
+            </mark>
+            . Whether you need a short city trip or a long-distance journey,
+            <mark>Yash Raj Cab Services ensures a comfortable</mark> and{" "}
+            <mark>hassle-free travel experience every time</mark>.
           </p>
         </div>
         <div className="aboutusconb">

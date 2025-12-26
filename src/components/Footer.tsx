@@ -27,7 +27,10 @@ export default function Footer() {
             </p>
             <p>
               Address:{" "}
-              <a href="" className="fLink">
+              <a
+                href="https://maps.app.goo.gl/1n4rBfduw9AKAtbs7"
+                className="fLink"
+              >
                 Service Area: Kothariya Chowkdi, Khokhdadi River, Rajkot
               </a>
             </p>
@@ -46,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footerBoxb">
-            <h3>Manu</h3>
+            <h3>Menu</h3>
             <p className="navLink">
               <Link to="/" className="abxx">
                 Home
@@ -77,6 +80,11 @@ export default function Footer() {
                 Book Now
               </Link>
             </p>
+            <p className="navLink">
+              <Link to="/policy" className="abxx">
+                Our Policy
+              </Link>
+            </p>
           </div>
           <div className="footerBoxc">
             <h3>Popular Cities</h3>
@@ -95,7 +103,9 @@ export default function Footer() {
           </div>
         </div>
         <p className="polyfooter">
-          © 2025 Taxi & Tourist Cab Service | All Rights Reserved
+          <Link to="/policy" className="polyfooter">
+            © 2025 Taxi & Tourist Cab Service | All Rights Reserved
+          </Link>
         </p>
       </div>
     </>

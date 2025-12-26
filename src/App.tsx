@@ -5,6 +5,7 @@ import About from "./components/Aboutus";
 import Fleet from "./components/Fleet";
 import Tour from "./components/Tour";
 import Contect from "./components/Contect";
+import Policy from "./components/Policy";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/fleets" element={<Fleet />}></Route>
           <Route path="/tour" element={<Tour />}></Route>
           <Route path="/contactus" element={<Contect />}></Route>
+          <Route path="/policy" element={<Policy />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -78,7 +78,7 @@ export default function Contect() {
             query about your recent trip, our team is ready to assist you.
           </p>
           <h3>Yash Raj Cab Services</h3>
-          <a href="https://maps.app.goo.gl/zpBLSyWqMhU7RSLy7" className="plink">
+          <a href="https://maps.app.goo.gl/1n4rBfduw9AKAtbs7" className="plink">
             Kothariya Chowkdi, Khokhdadi River, Rajkot
           </a>
           <a href="mailto: Bhojakvanraj111@gmail.com" className="plink">
