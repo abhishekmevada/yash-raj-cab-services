@@ -658,7 +658,7 @@
   }
   .homesecContainer {
     background-size: 100% 100%;
-    background-image: url("/public/Yellowtaxi.jpg");
+    background-image: url("Yellowtaxi.jpg");
   }
   .formContainerxyz {
     width: 100%;

@@ -102,59 +102,84 @@ export default function Fleet() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // Define the function to run when the page loads
-    const handleLoad = () => {
-      // Optional: Add a small delay so the user sees the loader for at least a moment
-      // (prevents an ugly "flicker" on fast connections)
-      setTimeout(() => {
+    // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
+    const imageUrls = [
+      "/HondaCity.jpg",
+      "/HondaAmaze.jpg",
+      "/marusuzi.webp",
+      "/maertiga.avif",
+      "/taverab.png",
+      "/tempotraveller.png",
+      "/innovacre.jpg",
+      "/toyotainnovab.jpg",
+      "/volvob.png",
+    ];
+
+    // Fixed TypeScript types here:
+    const preloadImage = (url: string): Promise<void> => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => resolve();
+        img.onerror = () => resolve(); // Resolve on error too, so loader doesn't get stuck
+      });
+    };
+
+    Promise.all(imageUrls.map(preloadImage))
+      .then(() => {
         setIsPageLoaded(true);
-      }, 500);
-    };
-
-    // Check if the page has ALREADY loaded before this component mounted
-    // (This handles cases where the browser caches the page)
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      // Otherwise, add the event listener
-      window.addEventListener("load", handleLoad);
-    }
-
-    // Cleanup: Remove the listener when the component unmounts
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+      })
+      .catch((err) => {
+        console.error("Image preload failed", err);
+        setIsPageLoaded(true);
+      });
   }, []);
-
-  // 1. Show Loader if page is NOT loaded
-  if (!isPageLoaded) {
-    return <Loading />;
-  }
   return (
     <>
-      <Navbar />
-      <div className="fleetContainer">
-        <h1>Our Cars</h1>
-        <div className="fleetconGRid">
-          {cars.map((items: Carproduct) => (
-            <div className="fleetpBox">
-              <img src={items.image} alt="" className="fleetImg" />
-              <div className="fleetDescribe">
-                <h3>{items.name}</h3>
-                <p>{items.price}</p>
-                <p>{items.distance}</p>
-                <p>{items.des}</p>
-                <a className="bookBut">
-                  <Link to="/" className="linkf">
-                    Book Now
-                  </Link>
-                </a>
-              </div>
-            </div>
-          ))}
+      {!isPageLoaded && (
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 9999,
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Loading />
         </div>
+      )}
+      <div
+        style={{
+          opacity: isPageLoaded ? 1 : 0,
+          transition: "opacity 0.5s ease",
+        }}
+      >
+        <Navbar />
+        <div className="fleetContainer">
+          <h1>Our Cars</h1>
+          <div className="fleetconGRid">
+            {cars.map((items: Carproduct) => (
+              <div className="fleetpBox">
+                <img src={items.image} alt="" className="fleetImg" />
+                <div className="fleetDescribe">
+                  <h3>{items.name}</h3>
+                  <p>{items.price}</p>
+                  <p>{items.distance}</p>
+                  <p>{items.des}</p>
+                  <a className="bookBut">
+                    <Link to="/" className="linkf">
+                      Book Now
+                    </Link>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

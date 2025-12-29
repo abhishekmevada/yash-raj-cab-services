@@ -71,49 +71,74 @@ export default function Tour() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // Define the function to run when the page loads
-    const handleLoad = () => {
-      // Optional: Add a small delay so the user sees the loader for at least a moment
-      // (prevents an ugly "flicker" on fast connections)
-      setTimeout(() => {
+    // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
+    const imageUrls = [
+      "/anand.jpg",
+      "/ahmedabad.jpg",
+      "/gandhinagar.jpg",
+      "/junagadh.jpg",
+      "/morbi.jpg",
+      "/navasari.jpg",
+      "/Rajkot.jpg",
+      "/surat.jpg",
+      "/vadodra.jpg",
+    ];
+
+    // Fixed TypeScript types here:
+    const preloadImage = (url: string): Promise<void> => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => resolve();
+        img.onerror = () => resolve(); // Resolve on error too, so loader doesn't get stuck
+      });
+    };
+
+    Promise.all(imageUrls.map(preloadImage))
+      .then(() => {
         setIsPageLoaded(true);
-      }, 500);
-    };
-
-    // Check if the page has ALREADY loaded before this component mounted
-    // (This handles cases where the browser caches the page)
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      // Otherwise, add the event listener
-      window.addEventListener("load", handleLoad);
-    }
-
-    // Cleanup: Remove the listener when the component unmounts
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+      })
+      .catch((err) => {
+        console.error("Image preload failed", err);
+        setIsPageLoaded(true);
+      });
   }, []);
-
-  // 1. Show Loader if page is NOT loaded
-  if (!isPageLoaded) {
-    return <Loading />;
-  }
   return (
     <>
-      <Navbar />
-      <div className="tourContainer">
-        <h1>Our Tourist Places</h1>
-        <div className="tourGridcontainer">
-          {tour.map((it: tourPro) => (
-            <div className="tourBox">
-              <img src={it.image} alt={it.name} className="tourImg" />
-              <h3 className="tourDec">{it.name}</h3>
-            </div>
-          ))}
+      {!isPageLoaded && (
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 9999,
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Loading />
         </div>
+      )}
+      <div
+        style={{
+          opacity: isPageLoaded ? 1 : 0,
+          transition: "opacity 0.5s ease",
+        }}
+      >
+        <Navbar />
+        <div className="tourContainer">
+          <h1>Our Tourist Places</h1>
+          <div className="tourGridcontainer">
+            {tour.map((it: tourPro) => (
+              <div className="tourBox">
+                <img src={it.image} alt={it.name} className="tourImg" />
+                <h3 className="tourDec">{it.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
