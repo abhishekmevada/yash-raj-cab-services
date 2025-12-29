@@ -1,40 +1,45 @@
 import Navbar from "./Navbar";
-import { useRef } from "react";
-import emailjs from "emailjs-com";
 import "./Contect.css";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 import Loading from "./Loading";
 export default function Contect() {
-  const form = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    message: "",
+    phnumber: "",
+    name: "",
+    email: "",
+  });
 
-  // FIX: Type-safe event
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!form.current) return;
-
-    emailjs
-      .sendForm(
-        "service_qg0eiyo",
-        "template_2h0kvrg",
-        form.current,
-        "neIh2Mt_gfywarO83"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Something went wrong!");
-        }
-      );
-
-    form.current.reset();
+  // Fixed: Updated type to include HTMLTextAreaElement
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
+  const handleBookCab = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const phoneNumber = "+919510954023";
+
+    const message =
+      `Yash Raj Cab Services\n` +
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone Number: ${formData.phnumber}\n` +
+      `Message: ${formData.message}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
@@ -89,29 +94,40 @@ export default function Contect() {
           </a>
         </div>
         <div className="contactusconb">
-          <form ref={form} onSubmit={sendEmail} className="formContainer">
+          <form onSubmit={handleBookCab} className="formContainer">
             <input
               type="text"
               placeholder="Name"
               className="inputField"
-              name="user_name"
+              name="name" // FIXED: Matches state key 'name'
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
             <input
               type="email"
               placeholder="Email"
               className="inputField"
-              name="user_email"
+              name="email" // FIXED: Matches state key 'email'
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
             <input
-              type="number"
+              type="tel" // SUGGESTION: Changed from 'number' to 'tel' for better mobile keyboard
               placeholder="Phone Number"
               className="inputField"
-              name="user_phonenumber"
+              name="phnumber" // FIXED: Matches state key 'phnumber'
+              value={formData.phnumber}
+              onChange={handleChange}
+              required
             />
             <textarea
               placeholder="Message.."
               className="textDescribe"
-              name="user_message"
+              name="message" // FIXED: Matches state key 'message'
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
             <button className="SendBut" type="submit">
               Send

@@ -539,7 +539,7 @@
   background-color: slateblue;
 }
 #fa {
-  background-image: url("/hatchbacks.jpg");
+  background-image: url("/hatchbacks.png");
   background-size: 100% 300px;
   object-fit: contain;
 }
@@ -549,7 +549,7 @@
   object-fit: contain;
 }
 #fc {
-  background-image: url("/fleetc.png");
+  background-image: url("/tempotraveller.png");
   background-size: 100% 300px;
   object-fit: contain;
 }
