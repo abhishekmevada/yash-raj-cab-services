@@ -2,7 +2,7 @@ import "./Footer.css";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoFacebook } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
-import logo from "/logo.webp";
+import logo from "/public/logo.webp";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
@@ -10,7 +10,13 @@ export default function Footer() {
       <div className="footerContainer">
         <div className="fxya">
           <div className="footerBoxa">
-            <img src={logo} alt="Yash Raj Car services" className="logobb" />
+            <img
+              src={logo}
+              alt="Yash Raj Car services"
+              className="logobb"
+              width="165"
+              height="100"
+            />
             <h1>Book Your Ride Today!</h1>
             <h2>Designed for comfort, safety & reliability</h2>
             <p>

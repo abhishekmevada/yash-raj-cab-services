@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "/logo.webp";
+import logo from "/public/logo.webp";
 import { FaAlignRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,13 @@ export default function Navbar() {
   const [sta, setSta] = useState(true);
   return (
     <div className="navContainer">
-      <img src={logo} alt="Yash Raj Car services" className="logo" />
+      <img
+        src={logo}
+        alt="Yash Raj Car services"
+        className="logo"
+        width="165"
+        height="100"
+      />
       <p className="navCio" onClick={() => setSta(!sta)}>
         <FaAlignRight />
       </p>

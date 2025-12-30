@@ -158,147 +158,164 @@ export default function Home() {
             <div className="herosecConb">
               {/* Form starts here */}
               <form onSubmit={handleBookCab} className="formContainerxyz">
-                <p>Type: </p>
-                <div className="checkBox">
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="tripType"
-                      value="Out Station"
-                      checked={formData.tripType === "Out Station"}
-                      onChange={handleChange}
-                    />
-                    Out Station
-                  </label>
+  <p>Type: </p>
+  <div className="checkBox">
+    <label className="radBut">
+      <input
+        type="radio"
+        name="tripType"
+        value="Out Station"
+        checked={formData.tripType === "Out Station"}
+        onChange={handleChange}
+        aria-label="Trip Type: Out Station" 
+      />
+      Out Station
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="tripType"
-                      value="One Way"
-                      checked={formData.tripType === "One Way"}
-                      onChange={handleChange}
-                    />
-                    One Way
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="tripType"
+        value="One Way"
+        checked={formData.tripType === "One Way"}
+        onChange={handleChange}
+        aria-label="Trip Type: One Way"
+      />
+      One Way
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="tripType"
-                      value="Local"
-                      checked={formData.tripType === "Local"}
-                      onChange={handleChange}
-                    />
-                    Local
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="tripType"
+        value="Local"
+        checked={formData.tripType === "Local"}
+        onChange={handleChange}
+        aria-label="Trip Type: Local"
+      />
+      Local
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="tripType"
-                      value="Airport"
-                      checked={formData.tripType === "Airport"}
-                      onChange={handleChange}
-                    />
-                    Airport
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="tripType"
+        value="Airport"
+        checked={formData.tripType === "Airport"}
+        onChange={handleChange}
+        aria-label="Trip Type: Airport"
+      />
+      Airport
+    </label>
 
-                  <p className="radioResult">
-                    You chose: <strong>{formData.tripType}</strong>
-                  </p>
-                </div>
-                <p>Car Selection: </p>
-                <div className="checkBox">
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="carType"
-                      value="Standard"
-                      checked={formData.carType === "Standard"}
-                      onChange={handleChange}
-                    />
-                    Standard
-                  </label>
+    <p className="radioResult">
+      You chose: <strong>{formData.tripType}</strong>
+    </p>
+  </div>
+  
+  <p>Car Selection: </p>
+  <div className="checkBox">
+    <label className="radBut">
+      <input
+        type="radio"
+        name="carType"
+        value="Standard"
+        checked={formData.carType === "Standard"}
+        onChange={handleChange}
+        aria-label="Car Type: Standard"
+      />
+      Standard
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="carType"
-                      value="Business"
-                      checked={formData.carType === "Business"}
-                      onChange={handleChange}
-                    />
-                    Business
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="carType"
+        value="Business"
+        checked={formData.carType === "Business"}
+        onChange={handleChange}
+        aria-label="Car Type: Business"
+      />
+      Business
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="carType"
-                      value="Vip"
-                      checked={formData.carType === "Vip"}
-                      onChange={handleChange}
-                    />
-                    Vip
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="carType"
+        value="Vip"
+        checked={formData.carType === "Vip"}
+        onChange={handleChange}
+        aria-label="Car Type: Vip"
+      />
+      Vip
+    </label>
 
-                  <label className="radBut">
-                    <input
-                      type="radio"
-                      name="carType"
-                      value="Bus-Minivan"
-                      checked={formData.carType === "Bus-Minivan"}
-                      onChange={handleChange}
-                    />
-                    Bus-Minivan
-                  </label>
+    <label className="radBut">
+      <input
+        type="radio"
+        name="carType"
+        value="Bus-Minivan"
+        checked={formData.carType === "Bus-Minivan"}
+        onChange={handleChange}
+        aria-label="Car Type: Bus-Minivan"
+      />
+      Bus-Minivan
+    </label>
 
-                  <p className="radioResult">
-                    You chose: <strong>{formData.carType}</strong>
-                  </p>
-                </div>
-                <div className="fieldBox">
-                  <label>Pick Up Location</label>
-                  <input
-                    type="text"
-                    name="pickupLocation"
-                    value={formData.pickupLocation}
-                    onChange={handleChange}
-                    placeholder="Enter pickup point"
-                    className="formInput"
-                    required
-                  />
-                </div>
+    <p className="radioResult">
+      You chose: <strong>{formData.carType}</strong>
+    </p>
+  </div>
 
-                <div className="fieldBox">
-                  <label>Drop Location</label>
-                  <input
-                    type="text"
-                    name="dropLocation"
-                    value={formData.dropLocation}
-                    onChange={handleChange}
-                    placeholder="Enter drop point"
-                    className="formInput"
-                    required
-                  />
-                </div>
+  <div className="fieldBox">
+    <label htmlFor="pickupLocation">Pick Up Location</label>
+    <input
+      id="pickupLocation"
+      type="text"
+      name="pickupLocation"
+      value={formData.pickupLocation}
+      onChange={handleChange}
+      placeholder="Enter pickup point"
+      className="formInput"
+      required
+      aria-label="Pick Up Location"
+    />
+  </div>
 
-                <div className="fieldBox">
-                  <label>Date & Time</label>
-                  <input
-                    type="datetime-local"
-                    name="dateTime"
-                    value={formData.dateTime}
-                    onChange={handleChange}
-                    className="formInput"
-                    required
-                  />
-                </div>
-                <button type="submit" className="formBut">
-                  Book Cab
-                </button>
-              </form>
+  <div className="fieldBox">
+    <label htmlFor="dropLocation">Drop Location</label>
+    <input
+      id="dropLocation"
+      type="text"
+      name="dropLocation"
+      value={formData.dropLocation}
+      onChange={handleChange}
+      placeholder="Enter drop point"
+      className="formInput"
+      required
+      aria-label="Drop Location"
+    />
+  </div>
+
+  <div className="fieldBox">
+    <label htmlFor="dateTime">Date & Time</label>
+    <input
+      id="dateTime"
+      type="datetime-local"
+      name="dateTime"
+      value={formData.dateTime}
+      onChange={handleChange}
+      className="formInput"
+      required
+      aria-label="Date and Time"
+    />
+  </div>
+  
+  <button type="submit" className="formBut" aria-label="Book Cab Now">
+    Book Cab
+  </button>
+</form>
             </div>
           </div>
 
