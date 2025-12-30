@@ -12,7 +12,7 @@ export default function Navbar() {
         src={logo}
         alt="Yash Raj Car services"
         className="logo"
-        width="165"
+        width="155"
         height="100"
       />
       <p className="navCio" onClick={() => setSta(!sta)}>

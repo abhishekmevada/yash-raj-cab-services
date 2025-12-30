@@ -14,7 +14,7 @@ export default function Footer() {
               src={logo}
               alt="Yash Raj Car services"
               className="logobb"
-              width="165"
+              width="155"
               height="100"
             />
             <h1>Book Your Ride Today!</h1>

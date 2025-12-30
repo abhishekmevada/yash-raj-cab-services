@@ -130,7 +130,25 @@ export default function Home() {
       >
         <Navbar />
         <main>
-          <div className="homesecContainer">
+          <div
+            className="homesecContainer"
+            style={{ position: "relative", overflow: "hidden" }}
+          >
+            {/* 1. The Image (Now in HTML, not CSS) */}
+            <img
+              src="/herobg.webp"
+              alt="Taxi Fleet Background"
+              fetchPriority="high" // <--- This is the magic keyword for LCP
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1, // Puts it behind the text
+              }}
+            />
             <div className="herosecCona">
               <h1>Yash Raj Cab Services</h1>
               <h2>Reliable Taxi & Tourist Cab Services</h2>
@@ -346,7 +364,7 @@ export default function Home() {
                 to <mark>outstation trips</mark> and <mark>tourist travel</mark>
                 , we are your <mark>trusted partner</mark> for all travel needs.
               </p>
-              <h3>Why Choose Us</h3>
+              <h2>Why Choose Us</h2>
               <div className="whychooseContainer">
                 <p className="wcuBox">Professional & Verified Drivers</p>
                 <p className="wcuBox">Clean & Well-Maintained Cars</p>
