@@ -83,7 +83,7 @@ export default function Home() {
 
       "/volvob.png",
 
-      "/Yellowtaxi.jpg",
+      "/yellow.jpg",
     ];
 
     // Fixed TypeScript types here:
