@@ -387,7 +387,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/serviceImge.png");
+  background: url("/serviceImge.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -414,7 +414,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/navasari.jpg");
+  background: url("/navasari.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -441,7 +441,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/gandhinagar.jpg");
+  background: url("/gandhinagar.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -468,7 +468,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/surat.jpg");
+  background: url("/surat.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
