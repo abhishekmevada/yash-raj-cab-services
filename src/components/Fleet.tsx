@@ -4,7 +4,7 @@ import Hondacity from "/HondaCity.webp";
 import HondaAmaze from "/HondaAmaze.webp";
 import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
-import Tavera from "/taverab.png";
+import Tavera from "/taverab.webp";
 import TempoTraveller from "/tempotraveller.webp";
 import ToyotaInnovaa from "/innovacre.webp";
 import ToyotaInnovab from "/toyotainnovab.webp";
