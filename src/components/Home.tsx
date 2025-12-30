@@ -52,41 +52,42 @@ export default function Home() {
 
   useEffect(() => {
     // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
-    const imageUrls = [
-      "herobg.webp",
+    // const imageUrls = [
+    //   "herobg.webp",
 
-      "/serviceImga.webp",
+    //   "/serviceImga.webp",
 
-      "/serviceImgb.webp",
+    //   "/serviceImgb.webp",
 
-      "/serviceImgc.webp",
+    //   "/serviceImgc.webp",
 
-      "/serviceImgd.webp",
+    //   "/serviceImgd.webp",
 
-      "/serviceImge.webp",
+    //   "/serviceImge.webp",
 
-      "/navasari.webp",
+    //   "/navasari.webp",
 
-      "/gandhinagar.webp",
+    //   "/gandhinagar.webp",
 
-      "/surat.webp",
+    //   "/surat.webp",
 
-      "/hatchbacks.webp",
+    //   "/hatchbacks.webp",
 
-      "/fleetb.webp",
+    //   "/fleetb.webp",
 
-      "/tempotraveller.webp",
+    //   "/tempotraveller.webp",
 
-      "/fleetd.webp",
+    //   "/fleetd.webp",
 
-      "/sedancars.webp",
+    //   "/sedancars.webp",
 
-      "/volvob.webp",
+    //   "/volvob.webp",
 
-      "/yellow.webp",
-      "/aboutcab.webp",
-    ];
+    //   "/yellow.webp",
+    //   "/aboutcab.webp",
+    // ];
 
+    const imageUrls = ["herobg.webp"];
     // Fixed TypeScript types here:
     const preloadImage = (url: string): Promise<void> => {
       return new Promise<void>((resolve) => {
@@ -138,7 +139,9 @@ export default function Home() {
             <img
               src="/herobg.webp"
               alt="Taxi Fleet Background"
-              fetchPriority="high" // <--- This is the magic keyword for LCP
+              fetchPriority="high"
+              width="1920"
+              height="1080"
               style={{
                 position: "absolute",
                 top: 0,
@@ -384,7 +387,18 @@ export default function Home() {
           <div className="servicesContainer">
             <h1>Our Services</h1>
             <div className="servicesConBox">
-              <div className="servicesBoxa">
+              <div className="servicesBoxa service-card">
+                {/* 1. New Real Image Tag */}
+                <img
+                  src="/serviceImga.webp"
+                  alt="Local Taxi"
+                  loading="lazy"
+                  className="card-bg-img"
+                  width="400"
+                  height="300"
+                />
+
+                {/* 2. Existing Content stays exactly the same */}
                 <div className="servicesDes">
                   <h2>Local Taxi Service</h2>
                   <p>
@@ -395,6 +409,14 @@ export default function Home() {
               </div>
 
               <div className="servicesBoxb">
+                <img
+                  src="/serviceImgb.webp"
+                  alt="Tourist Cab Packages"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Tourist Cab Packages</h2>
                   <p>
@@ -405,6 +427,14 @@ export default function Home() {
               </div>
 
               <div className="servicesBoxc">
+                <img
+                  src="/serviceImgc.webp"
+                  alt="Outstation Cab Service"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Outstation Cab Service</h2>
                   <p>
@@ -415,6 +445,14 @@ export default function Home() {
               </div>
 
               <div className="servicesBoxd">
+                <img
+                  src="/serviceImgd.webp"
+                  alt="Airport Pickup & Drop"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Airport Pickup & Drop</h2>
                   <p>
@@ -423,7 +461,16 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
               <div className="servicesBoxe">
+                <img
+                  src="/serviceImge.webp"
+                  alt="Corporate Travel"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Corporate Travel</h2>
                   <p>
@@ -440,21 +487,74 @@ export default function Home() {
             <p>We offer a wide range of vehicles to suit your needs</p>
             <div className="fleetboxContainer">
               <div className="fleetBox" id="fa">
+                <img
+                  src="/hatchbacks.webp"
+                  alt="Hatchback"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>Hatchback</h2>
               </div>
+
               <div className="fleetBox" id="fe">
+                <img
+                  src="/sedancars.webp"
+                  alt="Sedan"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>Sedan</h2>
               </div>
+
               <div className="fleetBox" id="fb">
+                <img
+                  src="/fleetb.webp"
+                  alt="SUV & MUV"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>SUV & MUV</h2>
               </div>
+
               <div className="fleetBox" id="fc">
+                <img
+                  src="/tempotraveller.webp"
+                  alt="Tempo Traveller"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>Tempo Traveller</h2>
               </div>
+
               <div className="fleetBox" id="fd">
+                <img
+                  src="/fleetd.webp"
+                  alt="Luxury Cars"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>Luxury Cars</h2>
               </div>
+
               <div className="fleetBox" id="ff">
+                <img
+                  src="/volvob.webp"
+                  alt="Volvo Bus"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <h2>Volvo Bus</h2>
               </div>
             </div>
@@ -469,18 +569,42 @@ export default function Home() {
             <h1>Our Tourist Places</h1>
             <div className="servicesConBox">
               <div className="servicesBoxf">
+                <img
+                  src="/navasari.webp"
+                  alt="Navasari"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Navasari</h2>
                 </div>
               </div>
 
               <div className="servicesBoxg">
+                <img
+                  src="/gandhinagar.webp"
+                  alt="Gandhinagar"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Gandhinagar</h2>
                 </div>
               </div>
 
               <div className="servicesBoxh">
+                <img
+                  src="/surat.webp"
+                  alt="Surat"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
                 <div className="servicesDes">
                   <h2>Surat</h2>
                 </div>
@@ -499,48 +623,60 @@ export default function Home() {
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox"></div>
-                  <h3>Amit Sharma</h3>
+                  <p className="testName">Amit Sharma</p>
                 </div>
-                <p>“Excellent service with polite drivers and clean cars.”</p>
+                <p className="testDesc">
+                  “Excellent service with polite drivers and clean cars.”
+                </p>
               </div>
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox" id="rab"></div>
-                  <h3>Priya Verma</h3>
+                  <p className="testName">Priya Verma</p>
                 </div>
-                <p>“Always on time and very comfortable rides.”</p>
+                <p className="testDesc">
+                  “Always on time and very comfortable rides.”
+                </p>
               </div>
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox" id="rac"></div>
-                  <h3>Rohit Patel</h3>
+                  <p className="testName">Rohit Patel</p>
                 </div>
-                <p>“Best cab service for airport pickup and drop”</p>
+                <p className="testDesc">
+                  “Best cab service for airport pickup and drop”
+                </p>
               </div>
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox"></div>
-                  <h3>Amit Sharma</h3>
+                  <p className="testName">Amit Sharma</p>
                 </div>
-                <p>“Affordable pricing and professional drivers.”</p>
+                <p className="testDesc">
+                  “Affordable pricing and professional drivers.”
+                </p>
               </div>
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox" id="rab"></div>
-                  <h3>Priya Verma</h3>
+                  <p className="testName">Priya Verma</p>
                 </div>
-                <p>“Smooth outstation trip with a friendly driver.”</p>
+                <p className="testDesc">
+                  “Smooth outstation trip with a friendly driver.”
+                </p>
               </div>
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox" id="rac"></div>
-                  <h3>Rohit Patel</h3>
+                  <p className="testName">Rohit Patel</p>
                 </div>
-                <p>“Reliable service for family and business travel.”</p>
+                <p className="testDesc">
+                  “Reliable service for family and business travel.”
+                </p>
               </div>
             </div>
           </div>
