@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Tell Google where your Sitemap is
+Sitemap: https://www.yashrajcabservices.com/sitemap.xml
