@@ -74,67 +74,77 @@ export default function Contect() {
   return (
     <>
       <Navbar />
-      <div className="contactuscontainer">
-        <div className="contactuscona">
-          <h1>Contact Us</h1>
-          <h2>We’re Here to Help – 24/7</h2>
-          <p>
-            Whether you need an instant ride, a tour package quote, or have a
-            query about your recent trip, our team is ready to assist you.
-          </p>
-          <h3>Yash Raj Cab Services</h3>
-          <a href="https://maps.app.goo.gl/1n4rBfduw9AKAtbs7" className="plink">
-            Kothariya Chowkdi, Khokhdadi River, Rajkot
-          </a>
-          <a href="mailto: Bhojakvanraj111@gmail.com" className="plink">
-            Bhojakvanraj111@gmail.com
-          </a>
-          <a href="https://wa.me/+917777914231" className="plink">
-            +91 7777914231
-          </a>
+      <main>
+        <div className="contactuscontainer">
+          <div className="contactuscona">
+            <h1>Contact Us</h1>
+            <h2>We’re Here to Help – 24/7</h2>
+            <p>
+              Whether you need an instant ride, a tour package quote, or have a
+              query about your recent trip, our team is ready to assist you.
+            </p>
+            <h3>Yash Raj Cab Services</h3>
+            <a
+              href="https://maps.app.goo.gl/1n4rBfduw9AKAtbs7"
+              className="plink"
+            >
+              Kothariya Chowkdi, Khokhdadi River, Rajkot
+            </a>
+            <a href="mailto: Bhojakvanraj111@gmail.com" className="plink">
+              Bhojakvanraj111@gmail.com
+            </a>
+            <a href="https://wa.me/+917777914231" className="plink">
+              +91 7777914231
+            </a>
+          </div>
+          <div className="contactusconb">
+            <form onSubmit={handleBookCab} className="formContainer">
+              <input
+                type="text"
+                placeholder="Name"
+                className="inputField"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                aria-label="Name" // <--- ADDED: Fixes Accessibility Score
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="inputField"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                aria-label="Email Address" // <--- ADDED: Fixes Accessibility Score
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="inputField"
+                name="phnumber"
+                value={formData.phnumber}
+                onChange={handleChange}
+                required
+                aria-label="Phone Number" // <--- ADDED: Fixes Accessibility Score
+              />
+              <textarea
+                placeholder="Message.."
+                className="textDescribe"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                aria-label="Message" // <--- ADDED: Fixes Accessibility Score
+              ></textarea>
+              <button className="SendBut" type="submit">
+                Send
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="contactusconb">
-          <form onSubmit={handleBookCab} className="formContainer">
-            <input
-              type="text"
-              placeholder="Name"
-              className="inputField"
-              name="name" // FIXED: Matches state key 'name'
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="inputField"
-              name="email" // FIXED: Matches state key 'email'
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel" // SUGGESTION: Changed from 'number' to 'tel' for better mobile keyboard
-              placeholder="Phone Number"
-              className="inputField"
-              name="phnumber" // FIXED: Matches state key 'phnumber'
-              value={formData.phnumber}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              placeholder="Message.."
-              className="textDescribe"
-              name="message" // FIXED: Matches state key 'message'
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-            <button className="SendBut" type="submit">
-              Send
-            </button>
-          </form>
-        </div>
-      </div>
+      </main>
+
       <Footer />
     </>
   );

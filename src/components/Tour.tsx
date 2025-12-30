@@ -126,17 +126,19 @@ export default function Tour() {
         }}
       >
         <Navbar />
-        <div className="tourContainer">
-          <h1>Our Tourist Places</h1>
-          <div className="tourGridcontainer">
-            {tour.map((it: tourPro) => (
-              <div className="tourBox">
-                <img src={it.image} alt={it.name} className="tourImg" />
-                <h3 className="tourDec">{it.name}</h3>
-              </div>
-            ))}
+        <main>
+          <div className="tourContainer">
+            <h1>Our Tourist Places</h1>
+            <div className="tourGridcontainer">
+              {tour.map((it: tourPro) => (
+                <div className="tourBox">
+                  <img src={it.image} alt={it.name} className="tourImg" />
+                  <h3 className="tourDec">{it.name}</h3>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     </>

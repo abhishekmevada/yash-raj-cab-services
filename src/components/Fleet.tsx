@@ -157,27 +157,29 @@ export default function Fleet() {
         }}
       >
         <Navbar />
-        <div className="fleetContainer">
-          <h1>Our Cars</h1>
-          <div className="fleetconGRid">
-            {cars.map((items: Carproduct) => (
-              <div className="fleetpBox">
-                <img src={items.image} alt="" className="fleetImg" />
-                <div className="fleetDescribe">
-                  <h3>{items.name}</h3>
-                  <p>{items.price}</p>
-                  <p>{items.distance}</p>
-                  <p>{items.des}</p>
-                  <a className="bookBut">
-                    <Link to="/" className="linkf">
-                      Book Now
-                    </Link>
-                  </a>
+        <main>
+          <div className="fleetContainer">
+            <h1>Our Cars</h1>
+            <div className="fleetconGRid">
+              {cars.map((items: Carproduct) => (
+                <div className="fleetpBox">
+                  <img src={items.image} alt="" className="fleetImg" />
+                  <div className="fleetDescribe">
+                    <h3>{items.name}</h3>
+                    <p>{items.price}</p>
+                    <p>{items.distance}</p>
+                    <p>{items.des}</p>
+                    <a className="bookBut">
+                      <Link to="/" className="linkf">
+                        Book Now
+                      </Link>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     </>
