@@ -1,14 +1,14 @@
 import "./Fleet.css";
 import Navbar from "./Navbar";
-import Hondacity from "/HondaCity.jpg";
-import HondaAmaze from "/HondaAmaze.jpg";
+import Hondacity from "/HondaCity.webp";
+import HondaAmaze from "/HondaAmaze.webp";
 import MarutiSuzuki from "/marusuzi.webp";
-import MarutiSuzukiErtiga from "/maertiga.avif";
+import MarutiSuzukiErtiga from "/maertiga.webp";
 import Tavera from "/taverab.png";
-import TempoTraveller from "/tempotraveller.png";
-import ToyotaInnovaa from "/innovacre.jpg";
-import ToyotaInnovab from "/toyotainnovab.jpg";
-import volvo from "/volvob.png";
+import TempoTraveller from "/tempotraveller.webp";
+import ToyotaInnovaa from "/innovacre.webp";
+import ToyotaInnovab from "/toyotainnovab.webp";
+import volvo from "/volvob.webp";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -104,15 +104,15 @@ export default function Fleet() {
   useEffect(() => {
     // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
     const imageUrls = [
-      "/HondaCity.jpg",
-      "/HondaAmaze.jpg",
+      "/HondaCity.webp",
+      "/HondaAmaze.webp",
       "/marusuzi.webp",
-      "/maertiga.avif",
-      "/taverab.png",
-      "/tempotraveller.png",
-      "/innovacre.jpg",
-      "/toyotainnovab.jpg",
-      "/volvob.png",
+      "/maertiga.webp",
+      "/taverab.webp",
+      "/tempotraveller.webp",
+      "/innovacre.webp",
+      "/toyotainnovab.webp",
+      "/volvob.webp",
     ];
 
     // Fixed TypeScript types here:

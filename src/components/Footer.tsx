@@ -2,7 +2,7 @@ import "./Footer.css";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoFacebook } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
-import logo from "/logo.jpeg";
+import logo from "/logo.webp";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (

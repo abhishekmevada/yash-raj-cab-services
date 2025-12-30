@@ -53,37 +53,37 @@ export default function Home() {
   useEffect(() => {
     // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
     const imageUrls = [
-      "herobg.png",
+      "herobg.webp",
 
-      "/serviceImga.png",
+      "/serviceImga.webp",
 
-      "/serviceImgb.png",
+      "/serviceImgb.webp",
 
-      "/serviceImgc.png",
+      "/serviceImgc.webp",
 
-      "/serviceImgd.png",
+      "/serviceImgd.webp",
 
-      "/serviceImge.png",
+      "/serviceImge.webp",
 
-      "/navasari.jpg",
+      "/navasari.webp",
 
-      "/gandhinagar.jpg",
+      "/gandhinagar.webp",
 
-      "/surat.jpg",
+      "/surat.webp",
 
-      "/hatchbacks.png",
+      "/hatchbacks.webp",
 
-      "/fleetb.png",
+      "/fleetb.webp",
 
-      "/tempotraveller.png",
+      "/tempotraveller.webp",
 
-      "/fleetd.png",
+      "/fleetd.webp",
 
       "/sedancars.webp",
 
-      "/volvob.png",
+      "/volvob.webp",
 
-      "/yellow.jpg",
+      "/yellow.webp",
       "/aboutcab.webp",
     ];
 

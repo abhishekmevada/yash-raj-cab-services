@@ -10,7 +10,7 @@ export default function Aboutus() {
 
   useEffect(() => {
     // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
-    const imageUrls = ["/aboutusbg.jpg"];
+    const imageUrls = ["/aboutusbg.webp"];
 
     // Fixed TypeScript types here:
     const preloadImage = (url: string): Promise<void> => {

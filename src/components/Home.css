@@ -5,7 +5,7 @@
   margin-top: 50px;
   display: flex;
   gap: 5px;
-  background-image: url("/herobg.png");
+  background-image: url("/herobg.webp");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -250,7 +250,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/serviceImga.png");
+  background: url("/serviceImga.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -309,7 +309,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/serviceImgb.png");
+  background: url("/serviceImgb.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -335,7 +335,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/serviceImgc.png");
+  background: url("/serviceImgc.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -361,7 +361,7 @@
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  background: url("/serviceImgd.png");
+  background: url("/serviceImgd.webp");
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -539,22 +539,22 @@
   background-color: slateblue;
 }
 #fa {
-  background-image: url("/hatchbacks.png");
+  background-image: url("/hatchbacks.webp");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fb {
-  background-image: url("/fleetb.png");
+  background-image: url("/fleetb.webp");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fc {
-  background-image: url("/tempotraveller.png");
+  background-image: url("/tempotraveller.webp");
   background-size: 100% 300px;
   object-fit: contain;
 }
 #fd {
-  background-image: url("/fleetd.png");
+  background-image: url("/fleetd.webp");
   background-size: 100% 300px;
   object-fit: contain;
 }
@@ -564,7 +564,7 @@
   object-fit: contain;
 }
 #ff {
-  background-image: url("/volvob.png");
+  background-image: url("/volvob.webp");
   background-size: 100% 300px;
   object-fit: contain;
 }
@@ -658,7 +658,7 @@
   }
   .homesecContainer {
     background-size: 100% 100%;
-    background-image: url("/yellow.jpg");
+    background-image: url("/yellow.webp");
   }
   .formContainerxyz {
     width: 100%;

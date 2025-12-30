@@ -2,13 +2,13 @@ import Navbar from "./Navbar";
 import "./Tour.css";
 import anand from "/anand.webp";
 import ahmedabad from "/ahmedabad.webp";
-import gandhinagar from "/gandhinagar.jpg";
-import junaadh from "/junagadh.jpg";
-import morbi from "/morbi.jpg";
-import navasari from "/navasari.jpg";
-import Rajkot from "/Rajkot.jpg";
-import surat from "/surat.jpg";
-import vadodra from "/vadodra.jpg";
+import gandhinagar from "/gandhinagar.webp";
+import junaadh from "/junagadh.webp";
+import morbi from "/morbi.webp";
+import navasari from "/navasari.webp";
+import Rajkot from "/Rajkot.webp";
+import surat from "/surat.webp";
+import vadodra from "/vadodra.webp";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
@@ -73,15 +73,15 @@ export default function Tour() {
   useEffect(() => {
     // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
     const imageUrls = [
-      "/anand.jpg",
-      "/ahmedabad.jpg",
-      "/gandhinagar.jpg",
-      "/junagadh.jpg",
-      "/morbi.jpg",
-      "/navasari.jpg",
-      "/Rajkot.jpg",
-      "/surat.jpg",
-      "/vadodra.jpg",
+      "/anand.webp",
+      "/ahmedabad.webp",
+      "/gandhinagar.webp",
+      "/junagadh.webp",
+      "/morbi.webp",
+      "/navasari.webp",
+      "/Rajkot.webp",
+      "/surat.webp",
+      "/vadodra.webp",
     ];
 
     // Fixed TypeScript types here:

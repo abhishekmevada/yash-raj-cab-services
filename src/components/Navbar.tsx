@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "/logo.jpeg";
+import logo from "/logo.webp";
 import { FaAlignRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
