@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import Aboutusbg from "/aboutusbg.jpg";
+import Aboutusbg from "/aboutusbg.webp";
 import Navbar from "./Navbar";
 import "./About.css";
 import { useState, useEffect } from "react";

@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import "./Home.css";
-import aboutcab from "/aboutcab.jpg";
+import aboutcab from "/aboutcab.webp";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
@@ -84,6 +84,7 @@ export default function Home() {
       "/volvob.png",
 
       "/yellow.jpg",
+      "/aboutcab.webp",
     ];
 
     // Fixed TypeScript types here:

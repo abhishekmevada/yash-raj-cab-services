@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import "./Tour.css";
-import anand from "/anand.jpg";
-import ahmedabad from "/ahmedabad.jpg";
+import anand from "/anand.webp";
+import ahmedabad from "/ahmedabad.webp";
 import gandhinagar from "/gandhinagar.jpg";
 import junaadh from "/junagadh.jpg";
 import morbi from "/morbi.jpg";
