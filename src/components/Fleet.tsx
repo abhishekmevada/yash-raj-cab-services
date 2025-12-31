@@ -4,7 +4,6 @@ import Hondacity from "/HondaCity.webp";
 import HondaAmaze from "/HondaAmaze.webp";
 import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
-import Tavera from "/taverab.webp";
 import TempoTraveller from "/tempotraveller.webp";
 import ToyotaInnovaa from "/innovacre.webp";
 import ToyotaInnovab from "/toyotainnovab.webp";
@@ -69,14 +68,6 @@ export default function Fleet() {
       id: 6,
       image: MarutiSuzukiErtiga,
       name: "Ertiga",
-      price: "12 rs per km ",
-      distance: "300 km range per day ",
-      des: "Toll parking driver food extra charge",
-    },
-    {
-      id: 7,
-      image: Tavera,
-      name: "Tavera",
       price: "12 rs per km ",
       distance: "300 km range per day ",
       des: "Toll parking driver food extra charge",
