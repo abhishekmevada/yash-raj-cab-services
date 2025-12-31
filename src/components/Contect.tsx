@@ -26,7 +26,7 @@ export default function Contect() {
   const handleBookCab = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const phoneNumber = "+919510954023";
+    const phoneNumber = "+917777914231";
 
     const message =
       `Yash Raj Cab Services\n` +
