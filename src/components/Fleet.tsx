@@ -73,7 +73,7 @@ export default function Fleet() {
       des: "Toll parking driver food extra charge",
     },
     {
-      id: 10,
+      id: 7,
       image: TempoTraveller,
       name: "Tempo Traveller",
       price: "26 to 40 rs per km ",
@@ -81,7 +81,7 @@ export default function Fleet() {
       des: "Toll parking driver food extra charge",
     },
     {
-      id: 11,
+      id: 8,
       image: volvo,
       name: "Volvo",
       price: "26 to 40 rs per km ",
