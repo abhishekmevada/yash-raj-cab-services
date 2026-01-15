@@ -513,13 +513,25 @@ export default function Home() {
               <div className="fleetBox" id="fb">
                 <img
                   src="/fleetb.webp"
-                  alt="SUV & MUV"
+                  alt="MUV"
                   className="card-bg-img"
                   loading="lazy"
                   width="400"
                   height="300"
                 />
-                <h2>SUV & MUV</h2>
+                <h2>MUV</h2>
+              </div>
+
+              <div className="fleetBox" id="fb">
+                <img
+                  src="/fleetx.jpg"
+                  alt="SUV"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <h2>SUV</h2>
               </div>
 
               <div className="fleetBox" id="fc">
