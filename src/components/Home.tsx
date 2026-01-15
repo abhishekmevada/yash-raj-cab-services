@@ -488,7 +488,7 @@ export default function Home() {
             <div className="fleetboxContainer">
               <div className="fleetBox" id="fa">
                 <img
-                  src="/hatchbacks.webp"
+                  src="/hatchbacks.jpg"
                   alt="Hatchback"
                   className="card-bg-img"
                   loading="lazy"
@@ -500,7 +500,7 @@ export default function Home() {
 
               <div className="fleetBox" id="fe">
                 <img
-                  src="/sedancars.webp"
+                  src="/sedan.jpg"
                   alt="Sedan"
                   className="card-bg-img"
                   loading="lazy"
