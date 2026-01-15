@@ -31,7 +31,7 @@ export default function Footer() {
                 +91 7777914231
               </a>
             </p>
-            <p className="fLink">
+            <p className="fLink" style={{ textDecoration: 'none' }}>
               Office address:{" "}Ahmedabad,Surat,Vadodara,Rajkot,Gandhinagar
             </p>
 
