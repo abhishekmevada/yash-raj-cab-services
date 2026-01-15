@@ -9,6 +9,7 @@ import statuofunity from "/statuofunity.jpg";
 import Rajkot from "/Rajkot.webp";
 import surat from "/surat.webp";
 import vadodra from "/vadodra.webp";
+import somnath from "/somnath.jpg";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
@@ -65,6 +66,11 @@ export default function Tour() {
       id: 9,
       image: vadodra,
       name: "Vadodra, Gujarat",
+    },
+    {
+      id: 10,
+      image: somnath,
+      name: "Somnath, Gujarat",
     },
   ];
 
