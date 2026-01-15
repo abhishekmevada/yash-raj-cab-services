@@ -649,7 +649,7 @@ export default function Home() {
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox"></div>
-                  <p className="testName">Amit Sharma</p>
+                  <p className="testName">Aryan Waghole</p>
                 </div>
                 <p className="testDesc">
                   “Excellent service with polite drivers and clean cars.”
@@ -688,7 +688,7 @@ export default function Home() {
               <div className="testimonialBox">
                 <div className="testimonialHeader">
                   <div className="ranomColorBox" id="rab"></div>
-                  <p className="testName">Priya Verma</p>
+                  <p className="testName">Abhishek Mevada</p>
                 </div>
                 <p className="testDesc">
                   “Smooth outstation trip with a friendly driver.”
