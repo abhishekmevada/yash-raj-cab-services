@@ -252,7 +252,7 @@ export default function Home() {
                     <input
                       type="radio"
                       name="carType"
-                      value="Business"
+                      value="Sedan"
                       checked={formData.carType === "Sedan"}
                       onChange={handleChange}
                       aria-label="Car Type: Business"
@@ -264,7 +264,7 @@ export default function Home() {
                     <input
                       type="radio"
                       name="carType"
-                      value="Vip"
+                      value="Suv"
                       checked={formData.carType === "Suv"}
                       onChange={handleChange}
                       aria-label="Car Type: Vip"
@@ -276,7 +276,7 @@ export default function Home() {
                     <input
                       type="radio"
                       name="carType"
-                      value="Bus-Minivan"
+                      value="Temo Traveller"
                       checked={formData.carType === "Temo Traveller"}
                       onChange={handleChange}
                       aria-label="Car Type: Bus-Minivan"
