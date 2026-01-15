@@ -153,7 +153,7 @@ export default function Home() {
               }}
             />
             <div className="herosecCona">
-              <h1>Yash Raj Cab Services</h1>
+              <h1>Yash Raj Cab Taxi Services</h1>
               <h2>Reliable Taxi & Tourist Cab Services</h2>
               <h3>Safe • Comfortable • On-Time Travel</h3>
               <p className="herodec">
