@@ -668,16 +668,6 @@ export default function Home() {
                   “Smooth outstation trip with a friendly driver.”
                 </p>
               </div>
-
-              <div className="testimonialBox">
-                <div className="testimonialHeader">
-                  <div className="ranomColorBox" id="rac"></div>
-                  <p className="testName">Rohit Patel</p>
-                </div>
-                <p className="testDesc">
-                  “Reliable service for family and business travel.”
-                </p>
-              </div>
             </div>
           </div>
         </main>
