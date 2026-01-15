@@ -531,7 +531,7 @@ export default function Home() {
                   width="400"
                   height="300"
                 />
-                <h2>Tempo Traveller</h2>
+                <h2>Traveller</h2>
               </div>
 
               <div className="fleetBox" id="fd">
