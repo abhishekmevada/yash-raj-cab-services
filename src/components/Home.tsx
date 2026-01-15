@@ -598,7 +598,7 @@ export default function Home() {
 
               <div className="servicesBoxh">
                 <img
-                  src="/surat.webp"
+                  src="/somnath.jpg"
                   alt="Surat"
                   className="card-bg-img"
                   loading="lazy"
@@ -606,7 +606,21 @@ export default function Home() {
                   height="300"
                 />
                 <div className="servicesDes">
-                  <h2>Surat</h2>
+                  <h2>Somnath</h2>
+                </div>
+              </div>
+
+              <div className="servicesBoxh">
+                <img
+                  src="/dwarka.jpg"
+                  alt="Surat"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div className="servicesDes">
+                  <h2>Dwarka</h2>
                 </div>
               </div>
             </div>
