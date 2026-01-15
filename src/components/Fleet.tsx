@@ -84,7 +84,7 @@ export default function Fleet() {
       id: 8,
       image: volvo,
       name: "Volvo",
-      price: "26 to 40 rs per km ",
+      price: "",
       distance: "300 km range per day ",
       des: "Toll parking driver food extra charge",
     },
