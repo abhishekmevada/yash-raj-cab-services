@@ -5,7 +5,7 @@ import ahmedabad from "/ahmedabad.webp";
 import gandhinagar from "/gandhinagar.webp";
 import junaadh from "/junagadh.webp";
 import morbi from "/morbi.webp";
-import navasari from "/navasari.webp";
+import statuofunity from "/statuofunity.jpg";
 import Rajkot from "/Rajkot.webp";
 import surat from "/surat.webp";
 import vadodra from "/vadodra.webp";
@@ -48,8 +48,8 @@ export default function Tour() {
     },
     {
       id: 6,
-      image: navasari,
-      name: "Navasari, Gujarat",
+      image: statuofunity,
+      name: "Statue of Unity, Gujarat",
     },
     {
       id: 7,
