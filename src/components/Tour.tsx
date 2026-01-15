@@ -61,7 +61,7 @@ export default function Tour() {
     {
       id: 8,
       image: surat,
-      name: "Surat, Gujarat",
+      name: "Shivrjarpur Beach, Gujarat",
     },
     {
       id: 9,
