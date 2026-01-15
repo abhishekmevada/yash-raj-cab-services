@@ -186,7 +186,7 @@ export default function Home() {
                       type="radio"
                       name="tripType"
                       value="Round Trip"
-                      checked={formData.tripType === "Out Station"}
+                      checked={formData.tripType === "Round Trip"}
                       onChange={handleChange}
                       aria-label="Trip Type: Out Station"
                     />
