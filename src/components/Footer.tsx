@@ -31,14 +31,8 @@ export default function Footer() {
                 +91 7777914231
               </a>
             </p>
-            <p>
-              Address:{" "}
-              <a
-                href="https://maps.app.goo.gl/1n4rBfduw9AKAtbs7"
-                className="fLink"
-              >
-                Service Area: Kothariya Chowkdi, Khokhdadi River, Rajkot
-              </a>
+            <p className="fLink">
+              Office address:{" "}Ahmedabad,Surat,Vadodara,Rajkot,Gandhinagar
             </p>
 
             <p>Available: 24/7</p>
