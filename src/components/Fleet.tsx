@@ -1,6 +1,6 @@
 import "./Fleet.css";
 import Navbar from "./Navbar";
-import Aura from "/sedan.jpg";
+import Aura from "/aura.jpg";
 import HondaAmaze from "/HondaAmaze.webp";
 import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
