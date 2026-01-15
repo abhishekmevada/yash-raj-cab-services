@@ -13,7 +13,7 @@ export default function Home() {
   // 1. Initialize State for all fields
   const [formData, setFormData] = useState({
     tripType: "Round Trip", // Default selection
-    carType: "Standard",
+    carType: "Hactback",
     pickupLocation: "",
     dropLocation: "",
     dateTime: "",
@@ -240,12 +240,12 @@ export default function Home() {
                     <input
                       type="radio"
                       name="carType"
-                      value="Standard"
-                      checked={formData.carType === "Standard"}
+                      value="Hactback"
+                      checked={formData.carType === "Hactback"}
                       onChange={handleChange}
                       aria-label="Car Type: Standard"
                     />
-                    Standard
+                    Hactback
                   </label>
 
                   <label className="radBut">
@@ -253,11 +253,11 @@ export default function Home() {
                       type="radio"
                       name="carType"
                       value="Business"
-                      checked={formData.carType === "Business"}
+                      checked={formData.carType === "Sedan"}
                       onChange={handleChange}
                       aria-label="Car Type: Business"
                     />
-                    Business
+                    Sedan
                   </label>
 
                   <label className="radBut">
@@ -265,11 +265,11 @@ export default function Home() {
                       type="radio"
                       name="carType"
                       value="Vip"
-                      checked={formData.carType === "Vip"}
+                      checked={formData.carType === "Suv"}
                       onChange={handleChange}
                       aria-label="Car Type: Vip"
                     />
-                    Vip
+                    Suv
                   </label>
 
                   <label className="radBut">
@@ -277,11 +277,11 @@ export default function Home() {
                       type="radio"
                       name="carType"
                       value="Bus-Minivan"
-                      checked={formData.carType === "Bus-Minivan"}
+                      checked={formData.carType === "Temo Traveller"}
                       onChange={handleChange}
                       aria-label="Car Type: Bus-Minivan"
                     />
-                    Bus-Minivan
+                    Temo Traveller
                   </label>
 
                   <p className="radioResult">
