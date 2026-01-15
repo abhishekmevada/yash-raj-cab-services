@@ -1,6 +1,6 @@
 import "./Fleet.css";
 import Navbar from "./Navbar";
-import Hondacity from "/HondaCity.webp";
+import Aura from "/sedan.jpg";
 import HondaAmaze from "/HondaAmaze.webp";
 import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
@@ -26,8 +26,8 @@ export default function Fleet() {
   const cars = [
     {
       id: 1,
-      image: Hondacity,
-      name: "Honda City",
+      image: Aura,
+      name: "Aura",
       price: "11Rs per km ",
       distance: "300 km range per day ",
       des: "Toll parking driver food extra charge",
