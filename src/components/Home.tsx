@@ -12,7 +12,7 @@ export default function Home() {
 
   // 1. Initialize State for all fields
   const [formData, setFormData] = useState({
-    tripType: "Out Station", // Default selection
+    tripType: "Round Trip", // Default selection
     carType: "Standard",
     pickupLocation: "",
     dropLocation: "",
@@ -185,12 +185,12 @@ export default function Home() {
                     <input
                       type="radio"
                       name="tripType"
-                      value="Out Station"
+                      value="Round Trip"
                       checked={formData.tripType === "Out Station"}
                       onChange={handleChange}
                       aria-label="Trip Type: Out Station"
                     />
-                    Out Station
+                    Round Trip
                   </label>
 
                   <label className="radBut">
