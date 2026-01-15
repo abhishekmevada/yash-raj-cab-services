@@ -570,7 +570,7 @@ export default function Home() {
             <div className="servicesConBox">
               <div className="servicesBoxf">
                 <img
-                  src="/navasari.webp"
+                  src="/airport.jpg"
                   alt="Navasari"
                   className="card-bg-img"
                   loading="lazy"
@@ -578,7 +578,7 @@ export default function Home() {
                   height="300"
                 />
                 <div className="servicesDes">
-                  <h2>Navasari</h2>
+                  <h2>Hirasar Airport</h2>
                 </div>
               </div>
 
