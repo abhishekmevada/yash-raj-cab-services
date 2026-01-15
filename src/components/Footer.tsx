@@ -27,8 +27,8 @@ export default function Footer() {
             </p>
             <p>
               Call / WhatsApp:{" "}
-              <a href="https://wa.me/+917777914231" className="fLink">
-                +91 7777914231
+              <a href="https://wa.me/+919904899229" className="fLink">
+                +91 9904899229
               </a>
             </p>
             <p className="fLink" style={{ textDecoration: 'none' }}>
