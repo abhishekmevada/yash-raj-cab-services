@@ -26,7 +26,7 @@ export default function Contect() {
   const handleBookCab = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const phoneNumber = "+917777914231";
+    const phoneNumber = "+919904899229";
 
     const message =
       `Yash Raj Cab Services\n` +
@@ -93,8 +93,8 @@ export default function Contect() {
             <a href="mailto: Bhojakvanraj111@gmail.com" className="plink">
               Bhojakvanraj111@gmail.com
             </a>
-            <a href="https://wa.me/+917777914231" className="plink">
-              +91 7777914231
+            <a href="https://wa.me/+919904899229" className="plink">
+              +91 9904899229
             </a>
           </div>
           <div className="contactusconb">
