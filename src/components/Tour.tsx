@@ -14,6 +14,7 @@ import dwarka from "/dwarka.jpg";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import Pho from "./Pho";
 
 type tourPro = {
   id: number;
@@ -152,6 +153,7 @@ export default function Tour() {
           </div>
         </main>
         <Footer />
+        <Pho />
       </div>
     </>
   );

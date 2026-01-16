@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import Pho from "./Pho";
 
 type Carproduct = {
   id: number;
@@ -172,6 +173,7 @@ export default function Fleet() {
           </div>
         </main>
         <Footer />
+        <Pho />
       </div>
     </>
   );

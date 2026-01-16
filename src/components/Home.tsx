@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import Pho from "./Pho";
 
 export default function Home() {
   // --- FIX: Moved State & Logic to the top level of Home ---
@@ -698,6 +699,7 @@ export default function Home() {
           </div>
         </main>
         <Footer />
+        <Pho />
       </div>
     </>
   );

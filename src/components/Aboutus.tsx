@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import "./About.css";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import Pho from "./Pho";
 
 export default function Aboutus() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -135,6 +136,7 @@ export default function Aboutus() {
           </div>
         </main>
         <Footer />
+        <Pho />
       </div>
     </>
   );

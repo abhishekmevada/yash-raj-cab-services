@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Loading from "./Loading";
+import Pho from "./Pho";
 export default function Contect() {
   const [formData, setFormData] = useState({
     message: "",
@@ -74,7 +75,7 @@ export default function Contect() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="conMain">
         <div className="contactuscontainer">
           <div className="contactuscona">
             <h1>Contact Us</h1>
@@ -144,8 +145,8 @@ export default function Contect() {
           </div>
         </div>
       </main>
-
       <Footer />
+      <Pho />
     </>
   );
 }

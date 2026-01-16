@@ -1,3 +1,29 @@
+.conMain {
+  position: relative;
+  overflow: hidden;
+}
+.conMain::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 150px;
+  width: 100%;
+  background: linear-gradient(90deg, royalblue, red, rgb(255, 0, 157), yellow);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 150%;
+}
+/* main::before {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 150px;
+  width: 55%;
+  background-color: rgb(189, 100, 100);
+  border-top-left-radius: 150%;
+  border-top-right-radius: 50%;
+} */
 .contactuscontainer {
   position: relative;
   min-height: 100vh;
@@ -6,6 +32,9 @@
   padding-top: 60px;
   display: flex;
   gap: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  z-index: 1;
 }
 .contactuscona {
   position: relative;
