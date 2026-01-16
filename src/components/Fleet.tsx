@@ -1,7 +1,7 @@
 import "./Fleet.css";
 import Navbar from "./Navbar";
 import Aura from "/aura.jpg";
-import HondaAmaze from "/HondaAmaze.webp";
+import wagner from "/wagner.jpg";
 import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
 import TempoTraveller from "/tempotraveller.webp";
@@ -34,9 +34,9 @@ export default function Fleet() {
     },
     {
       id: 2,
-      image: HondaAmaze,
-      name: "Honda Amaze",
-      price: "11Rs per km ",
+      image: wagner,
+      name: "Wagner",
+      price: "10Rs per km ",
       distance: "300 km range per day ",
       des: "Toll parking driver food extra charge",
     },
