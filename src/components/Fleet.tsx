@@ -6,7 +6,7 @@ import MarutiSuzuki from "/marusuzi.webp";
 import MarutiSuzukiErtiga from "/maertiga.webp";
 import TempoTraveller from "/tempotraveller.webp";
 import ToyotaInnovaa from "/innovacre.webp";
-import ToyotaInnovab from "/toyotainnovab.webp";
+import ToyotaInnovab from "/toyotainnovac.jpg";
 import volvo from "/volvob.webp";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
