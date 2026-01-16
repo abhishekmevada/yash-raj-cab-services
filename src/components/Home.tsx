@@ -171,7 +171,11 @@ export default function Home() {
                     Visit Our Fleets
                   </Link>
                 </p>
-                <a href="tell:+917777914231" className="ctaButherb">
+                <a
+                  href="tel:+919904899229"
+                  target="_blank"
+                  className="ctaButherb"
+                >
                   Call 24/7
                 </a>
               </div>
