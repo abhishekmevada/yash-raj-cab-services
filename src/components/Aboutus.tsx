@@ -124,7 +124,7 @@ export default function Aboutus() {
               professional service, friendly drivers, and stress-free travel.
             </p>
             <p>
-              <a href="tell:+917777914231" className="palink">
+              <a href="tel:+919904899229" target="_blank" className="palink">
                 Call
               </a>{" "}
               or{" "}
