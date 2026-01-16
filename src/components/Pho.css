@@ -18,17 +18,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1s;
 }
-
+.aIco:hover {
+  color: slateblue;
+  background-color: white;
+}
 .aIcb {
   padding: 10px;
   width: 50px;
   border-radius: 10px;
   color: white;
-  background-color: yellowgreen;
+  background-color: #25d366;
   backdrop-filter: blur(15px);
   font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1s;
+}
+.aIcb:hover {
+  color: #25d366;
+  background-color: white;
 }
