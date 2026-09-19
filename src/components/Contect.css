@@ -29,7 +29,7 @@
   min-height: 100vh;
   width: 100%;
   padding: 10px;
-  padding-top: 60px;
+  padding-top: 75px;
   display: flex;
   gap: 10px;
   background-color: transparent;
@@ -42,8 +42,13 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: center;
+  background-color: hsla(0, 0%, 90%, 0.655);
+  border-radius: 20px;
+  border: 2px solid hsla(0, 0%, 90%);
+}
+.contactbgJ {
+  width: 100%;
+  border-radius: 20px;
 }
 .contactusconb {
   position: relative;
@@ -67,10 +72,8 @@
   border-radius: 10px;
   border: none;
   width: 100%;
-  font-weight: 600;
-
+  background-color: hsla(0, 0%, 95%);
   font-size: 16px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 .textDescribe {
   padding: 10px 10px;
@@ -79,11 +82,9 @@
   width: 100%;
   height: 150px;
   border: none;
-  font-weight: 600;
   font-size: 16px;
-
   resize: none;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  background-color: hsla(0, 0%, 95%);
 }
 .SendBut {
   padding: 10px 10px;
@@ -118,8 +119,6 @@
   .contactusconb {
     width: 100%;
   }
-}
-@media (max-width: 430px) {
   .formContainer {
     width: 100%;
   }

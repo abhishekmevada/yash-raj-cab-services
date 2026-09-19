@@ -19,36 +19,24 @@ export default function Navbar() {
         <FaAlignRight />
       </p>
       <nav className={sta ? "cnav" : "onav"}>
-        <p className="navLink">
-          <Link to="/" className="linka">
-            Home
-          </Link>
-        </p>
-        <p className="navLink">
-          <Link to="/aboutus" className="linka">
-            About Us
-          </Link>
-        </p>
-        <p className="navLink">
-          <Link to="/fleets" className="linka">
-            Fleets
-          </Link>
-        </p>
-        <p className="navLink">
-          <Link to="/tour" className="linka">
-            Tour Places
-          </Link>
-        </p>
-        <p className="navLink">
-          <Link to="/contactus" className="linka">
-            Contact Us
-          </Link>
-        </p>
-        <p className="ctaBut">
-          <Link to="/" className="linka">
-            Book Now
-          </Link>
-        </p>
+        <Link to="/" className="navLink">
+          Home
+        </Link>
+        <Link to="/aboutus" className="navLink">
+          About Us
+        </Link>
+        <Link to="/fleets" className="navLink">
+          Fleets
+        </Link>
+        <Link to="/tour" className="navLink">
+          Tour Places
+        </Link>
+        <Link to="/contactus" className="navLink">
+          Contact Us
+        </Link>
+        <Link to="/" className="ctaBut">
+          Book Now
+        </Link>
       </nav>
     </div>
   );

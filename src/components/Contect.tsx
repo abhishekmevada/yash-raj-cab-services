@@ -15,7 +15,7 @@ export default function Contect() {
 
   // Fixed: Updated type to include HTMLTextAreaElement
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -37,7 +37,7 @@ export default function Contect() {
       `Message: ${formData.message}`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
     window.open(url, "_blank");
   };
@@ -78,7 +78,8 @@ export default function Contect() {
       <main className="conMain">
         <div className="contactuscontainer">
           <div className="contactuscona">
-            <h1>Contact Us</h1>
+            <img src="/contactbg.jpeg" alt="" className="contactbgJ" />
+            <h1 style={{ marginTop: "20px" }}>Contact Us</h1>
             <h2>We’re Here to Help – 24/7</h2>
             <p>
               Whether you need an instant ride, a tour package quote, or have a
@@ -144,9 +145,9 @@ export default function Contect() {
             </form>
           </div>
         </div>
+        <Pho />
       </main>
       <Footer />
-      <Pho />
     </>
   );
 }

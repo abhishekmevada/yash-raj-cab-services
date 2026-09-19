@@ -154,18 +154,16 @@ export default function Fleet() {
             <h1>Our Cars</h1>
             <div className="fleetconGRid">
               {cars.map((items: Carproduct) => (
-                <div className="fleetpBox">
-                  <img src={items.image} alt="" className="fleetImg" />
+                <div className="fleetpBox" key={items.id}>
+                  <img src={items.image} alt={items.name} className="fleetImg" />
                   <div className="fleetDescribe">
                     <h3>{items.name}</h3>
-                    <p>{items.price}</p>
+                    <p>{items.price || "\u00A0"}</p>
                     <p>{items.distance}</p>
                     <p>{items.des}</p>
-                    <a className="bookBut">
-                      <Link to="/" className="linkf">
-                        Book Now
-                      </Link>
-                    </a>
+                    <Link to="/" className="bookBut linkf">
+                      Book Now
+                    </Link>
                   </div>
                 </div>
               ))}

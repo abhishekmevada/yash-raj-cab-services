@@ -31,8 +31,8 @@ export default function Footer() {
                 +91 9904899229
               </a>
             </p>
-            <p className="fLink" style={{ textDecoration: 'none' }}>
-              Office address:{" "}Ahmedabad,Surat,Vadodara,Rajkot,Gandhinagar
+            <p className="fLink" style={{ textDecoration: "none" }}>
+              Office address: Ahmedabad,Surat,Vadodara,Rajkot,Gandhinagar
             </p>
 
             <p>Available: 24/7</p>
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footerBoxb">
-            <h3>Menu</h3>
+            <h3 style={{ padding: "10px 10px" }}>Menu</h3>
             <p className="navLink">
               <Link to="/" className="abxx">
                 Home

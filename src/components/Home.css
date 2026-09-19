@@ -48,11 +48,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   color: white;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 1s;
 }
@@ -68,11 +68,11 @@
   transition: 1s;
 }
 .ctaButher:hover {
-  color: slateblue;
+  color: hsl(291 97% 25% / 1);
   background-color: white;
 }
 .ctaButher:hover .linkher {
-  color: slateblue;
+  color: hsl(291 97% 25% / 1);
 }
 
 .ctaButherb {
@@ -87,7 +87,7 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 1s;
   text-decoration: none;
@@ -143,11 +143,11 @@
   padding: 10px;
   border: none;
   width: 100%;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   color: white;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   text-decoration: none;
@@ -182,7 +182,9 @@
   flex-direction: column;
   gap: 20px;
   animation: aba linear;
-  animation-range: entry 0%, cover 30%;
+  animation-range:
+    entry 0%,
+    cover 30%;
   animation-timeline: view();
 }
 @keyframes aba {
@@ -202,22 +204,21 @@
 .wcuBox {
   padding: 10px 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid slateblue;
+  border-bottom: 2px solid hsl(291 97% 25% / 1);
 }
 .aboutctaButher {
   padding: 10px 10px;
   width: max-content;
   text-align: center;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   color: white;
-  font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 1s;
 }
 .aboutctaButher:hover {
-  color: slateblue;
+  color: hsl(291 97% 25% / 1);
   background-color: white;
 }
 .linkherc {
@@ -227,7 +228,7 @@
   color: white;
 }
 .aboutctaButher:hover .linkherc {
-  color: slateblue;
+  color: hsl(291 97% 25% / 1);
 }
 .servicesContainer {
   position: relative;
@@ -254,8 +255,34 @@
   height: 100%;
   object-fit: cover;
   z-index: 0; /* Sits at the bottom */
-  border-radius: 5px;
+  border-radius: 10px;
   transition: transform 0.5s ease; /* Optional: Adds a smooth zoom effect on hover */
+}
+
+/* Position adjustments so temples/monuments are fully visible and don't go out of the box */
+.somnath-img {
+  object-position: center top !important;
+  transform-origin: center top !important;
+}
+
+.dwarka-img {
+  object-position: 70% top !important;
+  transform-origin: 70% top !important;
+}
+
+.gandhinagar-img {
+  object-position: center top !important;
+  transform-origin: center top !important;
+}
+
+.anand-img {
+  object-position: center top !important;
+  transform-origin: center top !important;
+}
+
+.vadodra-img {
+  object-position: center center !important;
+  transform-origin: center center !important;
 }
 
 /* 2. Shared Styles for ALL Service Boxes (a-h) */
@@ -270,7 +297,7 @@
 .servicesBoxh {
   position: relative;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 300px;
   width: 100%;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -278,7 +305,9 @@
 
   /* Keep your animation */
   animation: sa linear;
-  animation-range: entry 0%, cover 30%;
+  animation-range:
+    entry 0%,
+    cover 30%;
   animation-timeline: view();
 }
 
@@ -350,7 +379,9 @@
 .servicesBoxf:hover .card-bg-img,
 .servicesBoxg:hover .card-bg-img,
 .servicesBoxh:hover .card-bg-img {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(
+    1.05
+  ); /* Slight zoom on hover without pushing temple tops out */
 }
 .fleetContainer {
   position: relative;
@@ -378,7 +409,9 @@
   overflow: hidden; /* Crucial: Keeps the image inside the rounded corners */
 
   /* Keep your existing animation */
-  animation: fla linear, parallaxMove linear;
+  animation:
+    fla linear,
+    parallaxMove linear;
   animation-range: entry 0% cover 30%;
   animation-timeline: view();
 }
@@ -406,7 +439,7 @@
   border-bottom-right-radius: 10px;
   padding: 10px;
   color: white;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   z-index: 2; /* Sits on top of the image */
 }
 
@@ -445,11 +478,13 @@
 .testimonialBox {
   position: relative;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   height: max-content;
   animation: tes linear;
-  animation-range: entry 0%, cover 30%;
+  animation-range:
+    entry 0%,
+    cover 30%;
   animation-timeline: view();
 }
 @keyframes tes {
@@ -469,19 +504,23 @@
   gap: 10px;
 }
 .ranomColorBox {
-  height: 20px;
-  width: 20px;
-  background-color: slateblue;
+  height: 30px;
+  width: 30px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 95%);
   border-radius: 50%;
 }
 .testDesc {
   padding: 10px 10px;
 }
 #rab {
-  background-color: blue;
+  background-color: hsl(225, 73%, 67%);
 }
 #rac {
-  background-color: violet;
+  background-color: rgb(72, 255, 0);
 }
 .testName {
   font-weight: 600;

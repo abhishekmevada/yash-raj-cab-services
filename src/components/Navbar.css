@@ -28,6 +28,7 @@ nav {
   transition: 1s;
   border-radius: 5px;
   white-space: nowrap;
+  width: max-content;
 }
 .navLink:hover {
   background-color: red;

@@ -44,7 +44,7 @@ export default function Home() {
       `Date & Time: ${formData.dateTime}`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
     window.open(url, "_blank");
   };
@@ -52,42 +52,6 @@ export default function Home() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // 1. UPDATE THESE URLS TO MATCH YOUR ACTUAL BACKGROUND IMAGES
-    // const imageUrls = [
-    //   "herobg.webp",
-
-    //   "/serviceImga.webp",
-
-    //   "/serviceImgb.webp",
-
-    //   "/serviceImgc.webp",
-
-    //   "/serviceImgd.webp",
-
-    //   "/serviceImge.webp",
-
-    //   "/navasari.webp",
-
-    //   "/gandhinagar.webp",
-
-    //   "/surat.webp",
-
-    //   "/hatchbacks.webp",
-
-    //   "/fleetb.webp",
-
-    //   "/tempotraveller.webp",
-
-    //   "/fleetd.webp",
-
-    //   "/sedancars.webp",
-
-    //   "/volvob.webp",
-
-    //   "/yellow.webp",
-    //   "/aboutcab.webp",
-    // ];
-
     const imageUrls = ["herobg.webp"];
     // Fixed TypeScript types here:
     const preloadImage = (url: string): Promise<void> => {
@@ -138,7 +102,7 @@ export default function Home() {
           >
             {/* 1. The Image (Now in HTML, not CSS) */}
             <img
-              src="/herobg.webp"
+              src="/herobg.png"
               alt="Taxi Fleet Background"
               fetchPriority="high"
               width="1920"
@@ -484,6 +448,24 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
+              <div className="servicesBoxe">
+                <img
+                  src="/onwwayimg.jpg"
+                  alt="Corporate Travel"
+                  className="card-bg-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div className="servicesDes">
+                  <h2>One Way Service</h2>
+                  <p>
+                    Affordable one-way rides to your destination without the
+                    need for a return booking
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -588,7 +570,7 @@ export default function Home() {
               <div className="servicesBoxf">
                 <img
                   src="/airport.jpg"
-                  alt="Navasari"
+                  alt="Hirasar Airport"
                   className="card-bg-img"
                   loading="lazy"
                   width="400"
@@ -603,7 +585,7 @@ export default function Home() {
                 <img
                   src="/gandhinagar.webp"
                   alt="Gandhinagar"
-                  className="card-bg-img"
+                  className="card-bg-img gandhinagar-img"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -615,9 +597,9 @@ export default function Home() {
 
               <div className="servicesBoxh">
                 <img
-                  src="/somnath.jpg"
-                  alt="Surat"
-                  className="card-bg-img"
+                  src="/somnath.jpeg"
+                  alt="Somnath"
+                  className="card-bg-img somnath-img"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -630,8 +612,8 @@ export default function Home() {
               <div className="servicesBoxh">
                 <img
                   src="/dwarka.jpg"
-                  alt="Surat"
-                  className="card-bg-img"
+                  alt="Dwarka"
+                  className="card-bg-img dwarka-img"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -640,12 +622,38 @@ export default function Home() {
                   <h2>Dwarka</h2>
                 </div>
               </div>
+
+              <div className="servicesBoxh">
+                <img
+                  src="/vadodra.webp"
+                  alt="Vadodra, Gujarat"
+                  className="card-bg-img vadodra-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div className="servicesDes">
+                  <h2>Vadodra, Gujarat</h2>
+                </div>
+              </div>
+
+              <div className="servicesBoxh">
+                <img
+                  src="/anand.webp"
+                  alt="Anand, Gujarat"
+                  className="card-bg-img anand-img"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div className="servicesDes">
+                  <h2>Anand, Gujarat</h2>
+                </div>
+              </div>
             </div>
-            <p className="aboutctaButher">
-              <Link to="/tour" className="linkherc">
-                View More...
-              </Link>
-            </p>
+            <Link to="/tour" className="aboutctaButher">
+              View More
+            </Link>
           </div>
 
           <div className="testimonialContainer">
@@ -653,7 +661,7 @@ export default function Home() {
             <div className="testimonialminBox">
               <div className="testimonialBox">
                 <div className="testimonialHeader">
-                  <div className="ranomColorBox"></div>
+                  <div className="ranomColorBox">A</div>
                   <p className="testName">Aryan Waghole</p>
                 </div>
                 <p className="testDesc">
@@ -663,7 +671,9 @@ export default function Home() {
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
-                  <div className="ranomColorBox" id="rab"></div>
+                  <div className="ranomColorBox" id="rab">
+                    P
+                  </div>
                   <p className="testName">Priya Verma</p>
                 </div>
                 <p className="testDesc">
@@ -673,7 +683,9 @@ export default function Home() {
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
-                  <div className="ranomColorBox" id="rac"></div>
+                  <div className="ranomColorBox" id="rac">
+                    R
+                  </div>
                   <p className="testName">Rohit Patel</p>
                 </div>
                 <p className="testDesc">
@@ -682,7 +694,7 @@ export default function Home() {
               </div>
               <div className="testimonialBox">
                 <div className="testimonialHeader">
-                  <div className="ranomColorBox"></div>
+                  <div className="ranomColorBox">A</div>
                   <p className="testName">Amit Sharma</p>
                 </div>
                 <p className="testDesc">
@@ -692,7 +704,9 @@ export default function Home() {
 
               <div className="testimonialBox">
                 <div className="testimonialHeader">
-                  <div className="ranomColorBox" id="rab"></div>
+                  <div className="ranomColorBox" id="rab">
+                    A
+                  </div>
                   <p className="testName">Abhishek Mevada</p>
                 </div>
                 <p className="testDesc">

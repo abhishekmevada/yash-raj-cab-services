@@ -13,13 +13,14 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 .footerBoxa {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 50%;
 }
 .logobb {
   height: 100px;
@@ -38,6 +39,7 @@
 .footerBoxb {
   position: relative;
   padding: 10px;
+  min-width: 30%;
   width: max-content;
 }
 
@@ -59,12 +61,15 @@
   padding: 10px 10px;
   outline: none;
   font-size: 16px;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid #666;
+}
+.formInput::placeholder {
+  color: white;
+  background-color: transparent;
 }
 label {
   width: max-content;
-  font-weight: 600;
 }
 .sendBut {
   padding: 10px 10px;
@@ -92,4 +97,11 @@ label {
 .fLink {
   color: white;
   text-decoration: underline;
+  word-wrap: break-word;
+}
+
+@media (max-width: 850px) {
+  .footerBoxa {
+    width: 100%;
+  }
 }
