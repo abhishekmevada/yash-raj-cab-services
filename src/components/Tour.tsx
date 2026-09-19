@@ -9,7 +9,7 @@ import statuofunity from "/statuofunity.jpg";
 import Rajkot from "/Rajkot.webp";
 import surat from "/surat.webp";
 import vadodra from "/vadodra.webp";
-import somnath from "/somnath.jpg";
+import somnath from "/somnath.jpeg";
 import dwarka from "/dwarka.jpg";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
