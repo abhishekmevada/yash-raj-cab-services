@@ -21,7 +21,9 @@
   gap: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .fleetpBox:hover {
   transform: translateY(-4px);
@@ -55,7 +57,7 @@
   position: relative;
   margin-top: auto;
   padding: 10px;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -65,7 +67,9 @@
   text-decoration: none;
   text-align: center;
   display: block;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 .bookBut:hover {
   background-color: #5344be;

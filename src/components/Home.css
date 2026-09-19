@@ -139,6 +139,22 @@
   background: transparent;
   color: white;
 }
+
+.formInput[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+.formInput[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  font-size: 18px;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.formInput[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+  transform: scale(1.15);
+}
 .formBut {
   padding: 10px;
   border: none;

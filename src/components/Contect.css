@@ -88,7 +88,7 @@
 }
 .SendBut {
   padding: 10px 10px;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   color: white;
   border-radius: 10px;
   display: flex;
@@ -97,9 +97,8 @@
   justify-content: center;
   transition: 0.5s;
   width: 100%;
-  border: 2px solid slateblue;
+  border: 2px solid hsl(291 97% 35%);
   font-size: 16px;
-  font-weight: 600;
 }
 .SendBut:hover {
   background-color: white;

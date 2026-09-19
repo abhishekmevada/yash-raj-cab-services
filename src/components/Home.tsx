@@ -296,6 +296,15 @@ export default function Home() {
                     name="dateTime"
                     value={formData.dateTime}
                     onChange={handleChange}
+                    onClick={(e) => {
+                      if ("showPicker" in HTMLInputElement.prototype) {
+                        try {
+                          e.currentTarget.showPicker();
+                        } catch {
+                          // Ignore if already active or unsupported
+                        }
+                      }
+                    }}
                     className="formInput"
                     required
                     aria-label="Date and Time"

@@ -12,7 +12,7 @@
   width: 50px;
   border-radius: 10px;
   color: white;
-  background-color: slateblue;
+  background-color: hsl(291 97% 25% / 1);
   backdrop-filter: blur(15px);
   font-size: 25px;
   display: flex;
